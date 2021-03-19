@@ -17,8 +17,6 @@ public class User {
         birthDate = new Date();
     }
 
-    ;
-
     public User(String name, Date registerDate, Date birthDate, Float founds, String password) {
         this.name = name;
         this.registerDate = registerDate;
@@ -129,7 +127,7 @@ public class User {
             case CREATEAUCTION:
                 break;
             case INDEXAUCTIONS: //See auctions
-                SystemManager.getInstance().indexAuctions();
+                AuctionManager.getInstance().indexAuctions();
                 break;
             case INDEXBIDS:
                 this.indexBids();

@@ -34,9 +34,9 @@ public class Auction implements Comparable <Auction> {
         this.organizer = organizer;
     }
     public Auction(String organizer, String name, Date endDate) throws Exception {
-        var foundUser = SystemManager.getInstance().findUser(organizer);
+        var foundUser = UserManager.getInstance().findUser(organizer);
         if(foundUser instanceof Organizer)
-            this.organizer = (Organizer) SystemManager.getInstance().findUser(organizer);
+            this.organizer = (Organizer) UserManager.getInstance().findUser(organizer);
         else throw new Exception("No organizer with this name");
         this.name = name;
         this.endDate = endDate;
@@ -61,12 +61,25 @@ public class Auction implements Comparable <Auction> {
         return this.productList;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setProducts(List<Product> products) {
         this.productList = products;
     }
     public void addProduct(Product product)
     {
         this.productList.add(product);
+    }
+    public void deleteProduct(Product product) {
+                productList.remove(product);
+    }
+    public void closeAuction()
+    {
+        for(var temp : productList)
+            temp.buyOut();
+        productList.clear();
     }
     @Override
     public String toString()

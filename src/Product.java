@@ -80,6 +80,8 @@ public class Product {
     }
 
     public void buyOut() {
+        if(bids.size()==0)
+            System.out.println("No bids for this item");
         this.owner = bids.peek().getOwner().getName();
         this.boughtPrice = bids.peek().getAmount();
         while (bids.peek() != null) {
@@ -87,6 +89,9 @@ public class Product {
             var owner = bid.getOwner();
             owner.deleteBid(bid.getProduct());
         }
+        if(this.auction!=null)
+            auction.deleteProduct(this); //Daca are un auction, il scot de pe lista de licitatie
+
     }
 
     public Float getStartPrice() {
@@ -120,7 +125,10 @@ public class Product {
     public void setOwner(String owner) {
         this.owner = owner;
     }
-
+    @Override
+    public int hashCode() {
+        return id;
+    }
     @Override
     public String toString() {
         return "Product: " + name + " Start Price: " + startPrice.toString() + " Target Price: " + targetPrice.toString() + " Owned by: " + owner;

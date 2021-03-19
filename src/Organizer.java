@@ -9,8 +9,6 @@ public class Organizer extends User {
         super(name, password);
     }
 
-    ;
-
     public Organizer(String name, Date registerDate, Date birthDate, Float founds, String password) {
         super(name, registerDate, birthDate, founds, password);
     }
@@ -30,15 +28,18 @@ public class Organizer extends User {
     public Product registerProduct(String name, Float startingPrice, Float targetPrice) {
         return new Product.ProductBuilder(name, this.getName()).withTargetPrice(targetPrice).withStartingPrice(startingPrice).build(); //Fac un produs
     }
-    public Auction createAuction(String name,Date endDate)
-    {
+
+    public Auction createAuction(String name, Date endDate) {
         try {
-            return SystemManager.getInstance().createAuction(this.getName(),name,endDate);
+            var newAuction = AuctionManager.getInstance().createAuction(this.getName(), name, endDate);
+            auctionMapMap.put(newAuction.getName(), newAuction);
+            return newAuction;
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
+
     @Override
     public void showPanel() {
         super.showPanel();
@@ -51,8 +52,6 @@ public class Organizer extends User {
     public boolean checkCommand(Command command) {
         if (command == null)
             return false;
-        if (command.getValue() >= 0 && command.getValue() <= 8)
-            return true;
-        return false;
+        return command.getValue() >= 0 && command.getValue() <= 8;
     }
 }
