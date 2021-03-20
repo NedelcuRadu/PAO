@@ -1,8 +1,9 @@
 import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.BiConsumer;
 
-public class UserManager {
+public class UserManager implements Manager<User>{
     private static UserManager instance;
     private Map<String, User> userMap = new ConcurrentHashMap<>(); //TO DO: Threads
 
@@ -58,13 +59,22 @@ public class UserManager {
         return newAdmin;
     }
 
-    public void indexUsers() {
+    public void index() {
         System.out.format("+------+--------+-----------------+--------------+----------+%n");
         System.out.format("|  ID  |  NAME  |  REGISTER DATE  |  BIRTH DATE  |  FOUNDS  |%n");
         System.out.format("+------+--------+-----------------+--------------+----------+%n");
-        for (var user : userMap.entrySet())
-            System.out.println(user.getValue());
+        BiConsumer<String,User> method = (key, value) -> {
+            System.out.println(value);
+        };
+        userMap.forEach(method);
         System.out.format("+------+--------+-----------------+--------------+----------+%n");
     }
+
+    public void delete(User toDelete)
+    {
+        userMap.remove(toDelete.getName());
+    }
+
+
 
 }
