@@ -1,3 +1,5 @@
+import IOClasses.WriteToFile;
+
 import java.util.PriorityQueue;
 
 public class Product {
@@ -72,14 +74,17 @@ public class Product {
     ;
 
     public Bid getHighestBid() {
+        WriteToFile.log();
         return bids.peek();
     }
 
     public void placeBid(Bid bid) {
+        WriteToFile.log();
         bids.add(bid);
     }
 
     public void buyOut() {
+        WriteToFile.log();
         if(bids.size()==0)
             System.out.println("No bids for this item");
         this.owner = bids.peek().getOwner().getName();

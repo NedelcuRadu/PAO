@@ -1,10 +1,13 @@
+import IOClasses.Parse;
+import IOClasses.WriteToFile;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
 
-public class UserManager implements Manager<User>, Parse<User>{
+public class UserManager implements Manager<User>, Parse<User> {
     private static UserManager instance;
     private Map<String, User> userMap = new ConcurrentHashMap<>(); //TO DO: Threads
     private UserManager(){}
@@ -42,27 +45,32 @@ public class UserManager implements Manager<User>, Parse<User>{
         return tmp;
     }
     public User createUser(String name, Date registerDate, Date birthDate, Float founds, String password) {
+        WriteToFile.log();
         var newUser = new User(name, registerDate, birthDate, founds, password);
         return insert(newUser);
     }
 
     public User createUser(String name, Date birthDate, Float founds, String password) {
+        WriteToFile.log();
         var newUser = new User(name, birthDate, founds, password);
         return insert(newUser);
     }
 
     public User createUser(String name, Date birthDate, String password) {
         var newUser = new User(name, birthDate,password);
+        WriteToFile.log();
         return insert(newUser);
     }
     public Organizer createOrganizer(String name,Date birthDate,String password)
     {
+        WriteToFile.log();
         var newUser = new Organizer(name, birthDate,password);
         userMap.put(name, newUser);
         return newUser;
     }
     public User createAdmin(String name, String password)
     {
+        WriteToFile.log();
         var newAdmin = new Admin(name,password);
         userMap.put(name,newAdmin);
         return newAdmin;
@@ -77,10 +85,12 @@ public class UserManager implements Manager<User>, Parse<User>{
         };
         userMap.forEach(printConsumer);
         System.out.format("+--------+-----------------+--------------+----------+%n");
+        WriteToFile.log();
     }
 
     public void delete(User toDelete)
     {
+        WriteToFile.log();
         userMap.remove(toDelete.getName());
     }
 

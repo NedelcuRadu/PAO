@@ -1,3 +1,6 @@
+import IOClasses.CSVReader;
+import IOClasses.WriteToFile;
+
 import java.util.Date;
 import java.util.Scanner;
 public class Main {
@@ -43,6 +46,7 @@ public class Main {
         }
 
         public static void main(String[] args) throws Exception {
+            WriteToFile.writeLn("logging.txt","nume_actiune,timestamp");
 
             AuctionManager auctionManager = AuctionManager.getInstance();
             UserManager userManager = UserManager.getInstance();
@@ -61,11 +65,17 @@ public class Main {
             assert auctionsStrings != null;
             auctionManager.parseList(auctionsStrings);
             organizer.createAuction("Roman Treasures",DataValidator.convertToValidDate("22/03/2021"));
-
+            var productStrings = CSVReader.read("ProductsCSV.csv",",");
+            assert productStrings!=null;
+            auctionManager.populateProducts(productStrings);
+            auctionManager.indexProducts();
             Product p1 = new Product.ProductBuilder("Spear","Marian").build(); //Fac un produs
             a1.addProduct(p1); // Il adaug la licitatie
-            marian.addFounds(300f);
+            marian.addFounds(30000f);
             admin.addFounds(500f);
+            var bidStrings = CSVReader.read("BidsCSV.csv",",");
+            BidParser.populateBids(bidStrings);
+            marian.indexBids(); //Acum nu mai are bids
             admin.placeBid(p1,300f);
             marian.placeBid(p1,100f); // Fac un  bid pentru produs
             p1.buyOut(); //Termin licitatia pentru produs

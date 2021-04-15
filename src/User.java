@@ -1,6 +1,8 @@
+import IOClasses.WriteToFile;
+
 import java.util.*;
 
-public class User{
+public class User {
     private String name; //Required
     private Date registerDate; //Required - default data apelarii
     private Date birthDate; //Required
@@ -160,7 +162,9 @@ public class User{
     }
 
     public void placeBid(Product product, Float amount) {
+        WriteToFile.log();
         if (amount < this.founds) {
+
             founds -= amount;
             Bid newBid = new Bid(this, amount, product);
             product.placeBid(newBid);
@@ -170,6 +174,7 @@ public class User{
     }
 
     public void placeBid(Product product, Float amount, Date date) {
+        WriteToFile.log();
         if (amount < this.founds) {
             founds -= amount;
             Bid newBid = new Bid(this, amount, date, product);
@@ -178,8 +183,9 @@ public class User{
         } else
             System.out.println("You don't have enough founds, please add some first.");
     }
-    public void deleteBid(Product product)
-    {
+
+    public void deleteBid(Product product) {
+        WriteToFile.log();
         bidList.remove(product);
     }
 
