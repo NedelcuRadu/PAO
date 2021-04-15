@@ -46,12 +46,22 @@ public class Main {
 
             AuctionManager auctionManager = AuctionManager.getInstance();
             UserManager userManager = UserManager.getInstance();
+            //Citesc users din CSV
+            var userStrings = CSVReader.read("users.csv",",");
+            assert userStrings != null;
+            userManager.parseList(userStrings);
+
             var marian = userManager.createUser("Marian", new Date(), "ana");
             var admin = userManager.createAdmin("admin","admin");
             var organizer = userManager.createOrganizer("London Museum",DataValidator.convertToValidDate("20/03/2021"),"org");
             var a1 =auctionManager.createAuction("London Museum","Paris Paintings", DataValidator.convertToValidDate("23/02/2022"));
-            auctionManager.createAuction("London Museum","London Art", DataValidator.convertToValidDate("20/03/2021"));
+
+            //Citesc auctions din CSV
+            var auctionsStrings = CSVReader.read("auctions.csv",",");
+            assert auctionsStrings != null;
+            auctionManager.parseList(auctionsStrings);
             organizer.createAuction("Roman Treasures",DataValidator.convertToValidDate("22/03/2021"));
+
             Product p1 = new Product.ProductBuilder("Spear","Marian").build(); //Fac un produs
             a1.addProduct(p1); // Il adaug la licitatie
             marian.addFounds(300f);

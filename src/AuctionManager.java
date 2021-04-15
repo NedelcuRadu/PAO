@@ -1,8 +1,7 @@
 import java.util.*;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class AuctionManager implements Manager<Auction>{
+public class AuctionManager implements Manager<Auction>, Parse<Auction>{
     private static AuctionManager instance;
     private List<Auction> auctions = new ArrayList<Auction>(); //Sunt sortate in ordine crescatoare dupa StartDate
 
@@ -23,16 +22,30 @@ public class AuctionManager implements Manager<Auction>{
                 i+=step; //Crestem indicele
         return i+1;
     }
+
+    @Override
+    public Auction parse(List<String> obj) {
+        return new Auction(obj.get(0),obj.get(1),DataValidator.convertToValidDate(obj.get(2)),DataValidator.convertToValidDate(obj.get(3)));
+    }
+    public Auction insert(Auction auc)
+    {
+        auctions.add(auc);
+        return auc;
+    }
+
     private AuctionManager(){}
     public static AuctionManager getInstance() {
         if (instance == null)
             instance = new AuctionManager();
         return instance;
     }
-    public Auction createAuction(String organizer,String name, Date endDate) throws Exception {
+    public Auction createAuction(String organizer,String name, Date endDate) {
         var auction = new Auction(organizer,name,endDate);
-        auctions.add(auction);
-        return auction;
+       return insert(auction);
+    }
+    public Auction createAuction(String organizer,String name, Date startDate,Date endDate) {
+        var auction = new Auction(organizer,name,startDate,endDate);
+        return insert(auction);
     }
     public void index() {
         Collections.sort(auctions);

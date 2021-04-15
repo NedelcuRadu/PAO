@@ -1,7 +1,6 @@
 import java.util.*;
 
-public class User {
-    private static Integer id = 0;
+public class User{
     private String name; //Required
     private Date registerDate; //Required - default data apelarii
     private Date birthDate; //Required
@@ -127,7 +126,7 @@ public class User {
             case CREATEAUCTION:
                 break;
             case INDEXAUCTIONS: //See auctions
-                AuctionManager.getInstance().indexAuctions();
+                AuctionManager.getInstance().index();
                 break;
             case INDEXBIDS:
                 this.indexBids();
@@ -183,16 +182,14 @@ public class User {
     {
         bidList.remove(product);
     }
+
     @Override
     public String toString() {
-        String leftAlignFormat = "| %-4d | %-5s |   %te %<tb %<tY    |  %te %<tb %<tY  | %-4f |";
+        String leftAlignFormat = "| %-5s |   %te %<tb %<tY    |  %te %<tb %<tY  | %-4f |";
         Formatter fmt = new Formatter();
-        fmt.format(leftAlignFormat, id, name, registerDate, birthDate, founds);
+        fmt.format(leftAlignFormat, name, registerDate, birthDate, founds);
 
         return fmt.toString();
     }
 
-    static {
-        id++;
-    }
 }

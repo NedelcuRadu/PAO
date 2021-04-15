@@ -20,12 +20,14 @@ public class Auction implements Comparable <Auction> {
             return date1.compareTo(date2);
     }
 
-    public Auction(String name, Date startDate,Date endDate, List<Product> products)
-    {
+    public Auction(String organizer,String name, Date startDate,Date endDate) {
+        var foundUser = UserManager.getInstance().findUser(organizer);
+        if(foundUser instanceof Organizer)
+            this.organizer = (Organizer) UserManager.getInstance().findUser(organizer);
+
     this.name = name;
     this.startDate = startDate;
     this.endDate = endDate;
-    this.productList = products;
     }
     public Auction(Organizer organizer,String name, Date endDate)
     {
@@ -33,11 +35,11 @@ public class Auction implements Comparable <Auction> {
         this.endDate = endDate;
         this.organizer = organizer;
     }
-    public Auction(String organizer, String name, Date endDate) throws Exception {
+    public Auction(String organizer, String name, Date endDate) {
         var foundUser = UserManager.getInstance().findUser(organizer);
         if(foundUser instanceof Organizer)
             this.organizer = (Organizer) UserManager.getInstance().findUser(organizer);
-        else throw new Exception("No organizer with this name");
+        else System.out.println("No organizer with name "+organizer);
         this.name = name;
         this.endDate = endDate;
     }
