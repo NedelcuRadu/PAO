@@ -1,4 +1,8 @@
-import javax.swing.*;
+import managers.AuctionManager;
+import managers.UserManager;
+import models.Product;
+import models.User;
+
 import java.util.List;
 
 public class BidParser {

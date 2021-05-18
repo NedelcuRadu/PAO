@@ -1,3 +1,10 @@
+package models;
+
+import managers.AuctionManager;
+import models.Auction;
+import models.Product;
+import models.User;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;

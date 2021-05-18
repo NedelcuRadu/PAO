@@ -1,4 +1,6 @@
-final public class Admin extends Organizer{
+package models;
+
+final public class Admin extends Organizer {
     public Admin(String name, String password)
     {
         super(name,password);

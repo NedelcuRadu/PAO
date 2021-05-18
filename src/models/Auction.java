@@ -1,5 +1,7 @@
+package models;
 
 import IOClasses.WriteToFile;
+import managers.UserManager;
 
 import java.util.*;
 

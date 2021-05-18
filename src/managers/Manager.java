@@ -1,3 +1,5 @@
+package managers;
+
 import java.util.Map;
 
 public interface Manager<T> {

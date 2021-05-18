@@ -1,5 +1,10 @@
+package managers;
+
 import IOClasses.Parse;
 import IOClasses.WriteToFile;
+import models.Auction;
+import models.Product;
+import validators.DataValidator;
 
 import java.util.*;
 import java.util.function.Function;
@@ -28,7 +33,7 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
 
     @Override
     public Auction parse(List<String> obj) {
-        return new Auction(obj.get(0),obj.get(1),DataValidator.convertToValidDate(obj.get(2)),DataValidator.convertToValidDate(obj.get(3)));
+        return new Auction(obj.get(0),obj.get(1), DataValidator.convertToValidDate(obj.get(2)), DataValidator.convertToValidDate(obj.get(3)));
     }
     public Product parseProduct(List<String> obj)
     {
@@ -52,7 +57,7 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
             instance = new AuctionManager();
         return instance;
     }
-    public Auction createAuction(String organizer,String name, Date endDate) {
+    public Auction createAuction(String organizer, String name, Date endDate) {
         WriteToFile.log();
         var auction = new Auction(organizer,name,endDate);
        return insert(auction);

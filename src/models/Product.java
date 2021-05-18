@@ -1,3 +1,5 @@
+package models;
+
 import IOClasses.WriteToFile;
 
 import java.util.PriorityQueue;
@@ -136,6 +138,6 @@ public class Product {
     }
     @Override
     public String toString() {
-        return "Product: " + name + " Start Price: " + startPrice.toString() + " Target Price: " + targetPrice.toString() + " Owned by: " + owner;
+        return "Models.Product: " + name + " Start Price: " + startPrice.toString() + " Target Price: " + targetPrice.toString() + " Owned by: " + owner;
     }
 }

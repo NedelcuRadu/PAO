@@ -1,5 +1,8 @@
-import IOClasses.WriteToFile;
+package models;
 
+import IOClasses.WriteToFile;
+import managers.AuctionManager;
+import models.Command;
 import java.util.*;
 
 public class User {
@@ -122,9 +125,7 @@ public class User {
                 this.addFounds(amount);
                 break;
             case ADDPRODUCT:
-                break;
             case INDEXUSERS:
-                break;
             case CREATEAUCTION:
                 break;
             case INDEXAUCTIONS: //See auctions

@@ -1,12 +1,19 @@
 import IOClasses.CSVReader;
 import IOClasses.WriteToFile;
+import databaseConfig.UserDatabaseManager;
+import managers.AuctionManager;
+import managers.UserManager;
+import models.Command;
+import models.Product;
+import models.User;
+import validators.DataValidator;
 
 import java.util.Date;
 import java.util.Scanner;
 public class Main {
 
         public static void welcome() {
-            System.out.println("Welcome to the SUPER Secure Auction System. Please log in or register.");
+            System.out.println("Welcome to the SUPER Secure Models.Auction System. Please log in or register.");
             System.out.println("0. Exit");
             System.out.println("1. Log In");
             System.out.println("2. Register");
@@ -47,7 +54,6 @@ public class Main {
 
         public static void main(String[] args) throws Exception {
             WriteToFile.writeLn("logging.txt","nume_actiune,timestamp");
-
             AuctionManager auctionManager = AuctionManager.getInstance();
             UserManager userManager = UserManager.getInstance();
             //Citesc users din CSV
@@ -56,6 +62,8 @@ public class Main {
             userManager.parseList(userStrings);
 
             var marian = userManager.createUser("Marian", new Date(), "ana");
+            UserDatabaseManager userDatabsae = new UserDatabaseManager();
+            userDatabsae.insert(marian);
             var admin = userManager.createAdmin("admin","admin");
             var organizer = userManager.createOrganizer("London Museum",DataValidator.convertToValidDate("20/03/2021"),"org");
             var a1 =auctionManager.createAuction("London Museum","Paris Paintings", DataValidator.convertToValidDate("23/02/2022"));
@@ -64,7 +72,7 @@ public class Main {
             var auctionsStrings = CSVReader.read("auctions.csv",",");
             assert auctionsStrings != null;
             auctionManager.parseList(auctionsStrings);
-            organizer.createAuction("Roman Treasures",DataValidator.convertToValidDate("22/03/2021"));
+            organizer.createAuction("Roman Treasures", DataValidator.convertToValidDate("22/03/2021"));
             var productStrings = CSVReader.read("ProductsCSV.csv",",");
             assert productStrings!=null;
             auctionManager.populateProducts(productStrings);

@@ -1,5 +1,11 @@
+package managers;
+
 import IOClasses.Parse;
 import IOClasses.WriteToFile;
+import models.Admin;
+import models.Organizer;
+import models.User;
+import validators.DataValidator;
 
 import java.util.Date;
 import java.util.List;
@@ -21,7 +27,7 @@ public class UserManager implements Manager<User>, Parse<User> {
 
     @Override
     public User parse(List<String> obj) {
-        User tmp =  new User(obj.get(0),DataValidator.convertToValidDate(obj.get(1)),DataValidator.convertToValidDate(obj.get(2)),Float.parseFloat(obj.get(3)),obj.get(4));
+        User tmp =  new User(obj.get(0), DataValidator.convertToValidDate(obj.get(1)), DataValidator.convertToValidDate(obj.get(2)),Float.parseFloat(obj.get(3)),obj.get(4));
     return tmp;
     }
 
