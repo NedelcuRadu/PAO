@@ -2,10 +2,12 @@ package models;
 
 import IOClasses.WriteToFile;
 import managers.AuctionManager;
+import managers.DBManager;
 import models.Command;
+import validators.DataValidator;
 import java.util.*;
 
-public class User {
+public class User extends Model{
     private String name; //Required
     private Date registerDate; //Required - default data apelarii
     private Date birthDate; //Required
@@ -14,6 +16,74 @@ public class User {
     private Map<Product, Bid> bidList = new HashMap<>(); // Bids placed
     private List<Product> productsList = new ArrayList<Product>(); // Produsele detinute
 
+    public User() {
+
+    }
+
+    public String getTableName()
+    {
+        return "USERS";
+    }
+    public User parse(Map<String ,String> obj)
+    {
+
+        User tmp = new User();
+        tmp.setInfo(obj);
+        return tmp;
+    }
+    @Override
+    public Map<String, String> getValues() {
+        Map<String,String> values = new HashMap<>();
+        String formattedRegDate = DataValidator.formatDateToString(getRegisterDate());
+        String formattedBirthDate = DataValidator.formatDateToString(getBirthDate());
+        values.put("ID",getPK());
+        values.put("REG_DATE",formattedRegDate);
+        values.put("BIRTH_DATE",formattedBirthDate);
+        values.put("FOUNDS",founds.toString());
+        values.put("PASSWORD",DataValidator.escapeString(passwordHash));
+        return values;
+    }
+
+    @Override
+    public void setInfo(Map<String,String> obj) {
+        String name = obj.get("ID");
+        Date registerDate = DataValidator.convertToValidDate(obj.get("REG_DATE"));
+        Date birthDate = DataValidator.convertToValidDate(obj.get("BIRTH_DATE"));
+        System.out.println(birthDate);
+        Float founds = Float.parseFloat(obj.get("FOUNDS"));
+        String passwordHash = obj.get("PASSWORD");
+        this.setPasswordHash(passwordHash);
+        this.setFounds(founds);
+        this.setBirthDate(birthDate);
+        this.setRegisterDate(registerDate);
+        this.setName(name);
+    }
+
+    public String getInsertStatement()
+    {
+        StringBuilder stmt =  new StringBuilder("INSERT INTO USERS VALUES (");
+        String registerDate = DataValidator.escapeString(DataValidator.convertDateToString(this.getRegisterDate()));
+        String birthDate =  DataValidator.escapeString(DataValidator.convertDateToString(this.getBirthDate()));
+        stmt.append(DataValidator.escapeString(this.getName())).append(",");
+        stmt.append(birthDate).append(",");
+        stmt.append(this.getFounds().toString()).append(",");
+        stmt.append(DataValidator.escapeString(this.getPasswordHash())).append(",");
+        if (this.registerDate!=null)
+            stmt.append(registerDate).append(");");
+        else
+            stmt.append("DEFAULT);");
+        System.out.println(stmt.toString());
+        return stmt.toString();
+    }
+    public void setPK(String name)
+    {
+        this.name = name;
+        DBManager.update(this);
+    }
+    public String getPK()
+    {
+        return DataValidator.escapeString(name);
+    }
     protected User(String name, String password) {
         this.name = name;
         this.passwordHash = password;
@@ -51,6 +121,7 @@ public class User {
 
     public void setPasswordHash(String password) {
         this.passwordHash = password;
+        DBManager.update(this);
     }
 
     public String getName() {
@@ -71,22 +142,28 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+        DBManager.update(this);
     }
 
     public void setBirthDate(Date date) {
         this.birthDate = (Date) date.clone();
+        DBManager.update(this);
     }
 
     public void setRegisterDate(Date date) {
         this.registerDate = (Date) date.clone();
+        DBManager.update(this);
+
     }
 
     public void setFounds(Float founds) {
         this.founds = founds;
+        DBManager.update(this);
     }
 
     public void addFounds(Float founds) {
         this.founds += founds;
+        DBManager.update(this);
     }
 
     public void showPanel() {

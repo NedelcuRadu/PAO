@@ -18,7 +18,9 @@ public class DatabaseConfiguration {
 
     public static Connection getDatabaseConnection()    {
         try {
+
             if(databaseConnection == null || databaseConnection.isClosed()) {
+
                 databaseConnection = DriverManager.getConnection(DATABSE_URL, USER, PASSWORD);
             }
         } catch (SQLException throwables) {

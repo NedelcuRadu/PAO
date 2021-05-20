@@ -600,3 +600,869 @@ validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-18 23
 validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-18 23:04:28.453
 validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-18 23:04:28.453
 managers.UserManager.createUser(UserManager.java:67),2021-05-18 23:04:28.453
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:36:33.045
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:36:33.123
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:36:33.155
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:36:33.17
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:36:33.17
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:36:33.17
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 18:36:33.17
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:38:55.079
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:38:55.141
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:38:55.141
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:38:55.141
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:38:55.157
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:38:55.157
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 18:38:55.157
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:39:56.484
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:39:56.572
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:39:56.598
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:39:56.605
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:39:56.609
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:39:56.61
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 18:39:56.611
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:40:38.344
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:40:38.407
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:40:38.407
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:40:38.407
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:40:38.407
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:40:38.407
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 18:40:38.407
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:51:16.737
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:51:16.831
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:51:16.837
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:51:16.843
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:51:16.845
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:51:16.846
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 18:51:16.847
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:53:13.091
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:53:13.185
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:53:13.185
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:53:13.185
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:53:13.2
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:53:13.2
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 18:53:13.2
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:56:34.569
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:56:34.687
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:56:34.698
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:56:34.702
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:56:34.704
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 18:56:34.715
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 18:56:34.717
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:05:09.231
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:05:09.303
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:05:09.306
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:05:09.316
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:05:09.32
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:05:09.323
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 19:05:09.324
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:47.479
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:47.559
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:47.564
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:47.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:47.568
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:47.571
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 19:18:47.573
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 19:18:49.46
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:49.461
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 19:18:49.462
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:49.462
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 19:18:49.463
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:49.466
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:49.467
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:49.468
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:49.469
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 19:18:49.47
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 19:18:49.471
+models.Auction.addProduct(Auction.java:84),2021-05-19 19:18:49.474
+models.Auction.addProduct(Auction.java:84),2021-05-19 19:18:49.475
+models.Auction.addProduct(Auction.java:84),2021-05-19 19:18:49.475
+models.Auction.addProduct(Auction.java:84),2021-05-19 19:18:49.489
+models.User.placeBid(User.java:166),2021-05-19 19:18:49.492
+models.Product.placeBid(Product.java:84),2021-05-19 19:18:49.493
+models.User.placeBid(User.java:166),2021-05-19 19:18:49.494
+models.Product.placeBid(Product.java:84),2021-05-19 19:18:49.494
+models.Product.getHighestBid(Product.java:79),2021-05-19 19:18:49.498
+models.Product.getHighestBid(Product.java:79),2021-05-19 19:18:49.502
+models.User.placeBid(User.java:166),2021-05-19 19:18:49.504
+models.Product.placeBid(Product.java:84),2021-05-19 19:18:49.505
+models.User.placeBid(User.java:166),2021-05-19 19:18:49.506
+models.Product.placeBid(Product.java:84),2021-05-19 19:18:49.506
+models.Product.buyOut(Product.java:89),2021-05-19 19:18:49.507
+models.User.deleteBid(User.java:189),2021-05-19 19:18:49.508
+models.User.deleteBid(User.java:189),2021-05-19 19:18:49.509
+models.Product.getHighestBid(Product.java:79),2021-05-19 19:18:49.51
+models.Product.getHighestBid(Product.java:79),2021-05-19 19:18:49.512
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:40.359
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:40.405
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:40.405
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:40.405
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:40.405
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:40.405
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 23:06:40.405
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 23:06:41.631
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:41.631
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 23:06:41.631
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:41.631
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:06:41.631
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:41.631
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:41.631
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:41.647
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:41.647
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:06:41.647
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:06:41.647
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:06:41.647
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:06:41.647
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:06:41.647
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:06:41.647
+models.User.placeBid(User.java:167),2021-05-19 23:06:41.663
+models.Product.placeBid(Product.java:80),2021-05-19 23:06:41.663
+models.User.placeBid(User.java:167),2021-05-19 23:06:41.663
+models.Product.placeBid(Product.java:80),2021-05-19 23:06:41.663
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:06:41.663
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:06:41.663
+models.User.placeBid(User.java:167),2021-05-19 23:06:41.663
+models.Product.placeBid(Product.java:80),2021-05-19 23:06:41.663
+models.User.placeBid(User.java:167),2021-05-19 23:06:41.663
+models.Product.placeBid(Product.java:80),2021-05-19 23:06:41.663
+models.Product.buyOut(Product.java:85),2021-05-19 23:06:41.663
+models.User.deleteBid(User.java:190),2021-05-19 23:06:41.663
+models.User.deleteBid(User.java:190),2021-05-19 23:06:41.663
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:06:41.663
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:06:41.663
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:13.809
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:13.856
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:13.856
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:13.856
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:13.856
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:13.856
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 23:09:13.856
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 23:09:14.915
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:14.915
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 23:09:14.915
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:14.915
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:09:14.915
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:14.915
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:14.915
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:14.915
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:14.915
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:09:14.915
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:09:14.931
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:09:14.931
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:09:14.931
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:09:14.931
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:09:14.931
+models.User.placeBid(User.java:167),2021-05-19 23:09:14.931
+models.Product.placeBid(Product.java:80),2021-05-19 23:09:14.931
+models.User.placeBid(User.java:167),2021-05-19 23:09:14.931
+models.Product.placeBid(Product.java:80),2021-05-19 23:09:14.931
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:09:14.931
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:09:14.947
+models.User.placeBid(User.java:167),2021-05-19 23:09:14.947
+models.Product.placeBid(Product.java:80),2021-05-19 23:09:14.947
+models.User.placeBid(User.java:167),2021-05-19 23:09:14.947
+models.Product.placeBid(Product.java:80),2021-05-19 23:09:14.947
+models.Product.buyOut(Product.java:85),2021-05-19 23:09:14.947
+models.User.deleteBid(User.java:190),2021-05-19 23:09:14.947
+models.User.deleteBid(User.java:190),2021-05-19 23:09:14.947
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:09:14.947
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:09:14.947
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:51.139
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:51.186
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:51.186
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:51.186
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:51.186
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:51.186
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 23:19:51.186
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 23:19:52.276
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:52.276
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 23:19:52.276
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:52.276
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:19:52.276
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:52.276
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:52.292
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:52.292
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:52.292
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:19:52.292
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:19:52.292
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:19:52.292
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:19:52.292
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:19:52.292
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:19:52.292
+models.User.placeBid(User.java:167),2021-05-19 23:19:52.292
+models.Product.placeBid(Product.java:80),2021-05-19 23:19:52.292
+models.User.placeBid(User.java:167),2021-05-19 23:19:52.292
+models.Product.placeBid(Product.java:80),2021-05-19 23:19:52.292
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:19:52.292
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:19:52.307
+models.User.placeBid(User.java:167),2021-05-19 23:19:52.307
+models.Product.placeBid(Product.java:80),2021-05-19 23:19:52.307
+models.User.placeBid(User.java:167),2021-05-19 23:19:52.307
+models.Product.placeBid(Product.java:80),2021-05-19 23:19:52.307
+models.Product.buyOut(Product.java:85),2021-05-19 23:19:52.307
+models.User.deleteBid(User.java:190),2021-05-19 23:19:52.307
+models.User.deleteBid(User.java:190),2021-05-19 23:19:52.307
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:19:52.307
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:19:52.307
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.426
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 23:44:14.457
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:14.457
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:44:14.457
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:14.457
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:14.457
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:14.457
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:14.473
+models.User.placeBid(User.java:167),2021-05-19 23:44:14.473
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:14.473
+models.User.placeBid(User.java:167),2021-05-19 23:44:14.473
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:14.473
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:14.473
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:14.473
+models.User.placeBid(User.java:167),2021-05-19 23:44:14.473
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:14.473
+models.User.placeBid(User.java:167),2021-05-19 23:44:14.473
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:14.473
+models.Product.buyOut(Product.java:85),2021-05-19 23:44:14.473
+models.User.deleteBid(User.java:190),2021-05-19 23:44:14.473
+models.User.deleteBid(User.java:190),2021-05-19 23:44:14.473
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:14.473
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:14.473
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.08
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.096
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.096
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.096
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.096
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.096
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 23:44:57.096
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 23:44:57.096
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.096
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 23:44:57.111
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.111
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:44:57.111
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.111
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.111
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.111
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.111
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:44:57.111
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:44:57.111
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:57.111
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:57.111
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:57.111
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:44:57.111
+models.User.placeBid(User.java:167),2021-05-19 23:44:57.111
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:57.127
+models.User.placeBid(User.java:167),2021-05-19 23:44:57.127
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:57.127
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:57.127
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:57.127
+models.User.placeBid(User.java:167),2021-05-19 23:44:57.127
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:57.127
+models.User.placeBid(User.java:167),2021-05-19 23:44:57.127
+models.Product.placeBid(Product.java:80),2021-05-19 23:44:57.127
+models.Product.buyOut(Product.java:85),2021-05-19 23:44:57.127
+models.User.deleteBid(User.java:190),2021-05-19 23:44:57.127
+models.User.deleteBid(User.java:190),2021-05-19 23:44:57.127
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:57.127
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:44:57.127
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.121
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.121
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.121
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 23:47:24.137
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:47:24.137
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:47:24.137
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:47:24.137
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:47:24.137
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:47:24.137
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:47:24.153
+models.User.placeBid(User.java:167),2021-05-19 23:47:24.153
+models.Product.placeBid(Product.java:80),2021-05-19 23:47:24.153
+models.User.placeBid(User.java:167),2021-05-19 23:47:24.153
+models.Product.placeBid(Product.java:80),2021-05-19 23:47:24.153
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:47:24.153
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:47:24.153
+models.User.placeBid(User.java:167),2021-05-19 23:47:24.153
+models.Product.placeBid(Product.java:80),2021-05-19 23:47:24.153
+models.User.placeBid(User.java:167),2021-05-19 23:47:24.153
+models.Product.placeBid(Product.java:80),2021-05-19 23:47:24.153
+models.Product.buyOut(Product.java:85),2021-05-19 23:47:24.153
+models.User.deleteBid(User.java:190),2021-05-19 23:47:24.153
+models.User.deleteBid(User.java:190),2021-05-19 23:47:24.153
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:47:24.153
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:47:24.153
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.689
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.689
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+managers.UserManager.createUser(UserManager.java:67),2021-05-19 23:51:20.705
+managers.UserManager.createAdmin(UserManager.java:79),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+managers.UserManager.createOrganizer(UserManager.java:72),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-19 23:51:20.705
+managers.AuctionManager.createAuction(AuctionManager.java:61),2021-05-19 23:51:20.705
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:51:20.705
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:51:20.705
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:51:20.705
+models.Auction.addProduct(Auction.java:81),2021-05-19 23:51:20.72
+models.User.placeBid(User.java:167),2021-05-19 23:51:20.72
+models.Product.placeBid(Product.java:80),2021-05-19 23:51:20.72
+models.User.placeBid(User.java:167),2021-05-19 23:51:20.72
+models.Product.placeBid(Product.java:80),2021-05-19 23:51:20.72
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:51:20.72
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:51:20.72
+models.User.placeBid(User.java:167),2021-05-19 23:51:20.72
+models.Product.placeBid(Product.java:80),2021-05-19 23:51:20.72
+models.User.placeBid(User.java:167),2021-05-19 23:51:20.72
+models.Product.placeBid(Product.java:80),2021-05-19 23:51:20.72
+models.Product.buyOut(Product.java:85),2021-05-19 23:51:20.72
+models.User.deleteBid(User.java:190),2021-05-19 23:51:20.72
+models.User.deleteBid(User.java:190),2021-05-19 23:51:20.72
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:51:20.72
+models.Product.getHighestBid(Product.java:75),2021-05-19 23:51:20.72
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.641
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.649
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.65
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.651
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.651
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.652
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 13:17:54.654
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 13:17:54.654
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.655
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 13:17:54.655
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.655
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:17:54.656
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.657
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.658
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.658
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.659
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:17:54.659
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:17:54.659
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.482
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.49
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.491
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.492
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.492
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.493
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 13:18:58.494
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 13:18:58.495
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.495
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 13:18:58.496
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.496
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:18:58.497
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.498
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.499
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.499
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.5
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:18:58.501
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:18:58.501
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:18:58.503
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:18:58.504
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:18:58.504
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:18:58.513
+models.User.placeBid(User.java:167),2021-05-20 13:18:58.514
+models.Product.placeBid(Product.java:80),2021-05-20 13:18:58.515
+models.User.placeBid(User.java:167),2021-05-20 13:18:58.515
+models.Product.placeBid(Product.java:80),2021-05-20 13:18:58.516
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:18:58.518
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:18:58.52
+models.User.placeBid(User.java:167),2021-05-20 13:18:58.521
+models.Product.placeBid(Product.java:80),2021-05-20 13:18:58.521
+models.User.placeBid(User.java:167),2021-05-20 13:18:58.521
+models.Product.placeBid(Product.java:80),2021-05-20 13:18:58.521
+models.Product.buyOut(Product.java:85),2021-05-20 13:18:58.522
+models.User.deleteBid(User.java:190),2021-05-20 13:18:58.522
+models.User.deleteBid(User.java:190),2021-05-20 13:18:58.522
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:18:58.523
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:18:58.523
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.968
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.968
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.968
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.968
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 13:42:25.984
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:42:25.984
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:42:25.984
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:42:25.984
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:42:25.984
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:42:25.984
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:42:26.0
+models.User.placeBid(User.java:167),2021-05-20 13:42:26.0
+models.Product.placeBid(Product.java:80),2021-05-20 13:42:26.0
+models.User.placeBid(User.java:167),2021-05-20 13:42:26.0
+models.Product.placeBid(Product.java:80),2021-05-20 13:42:26.0
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:42:26.0
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:42:26.0
+models.User.placeBid(User.java:167),2021-05-20 13:42:26.0
+models.Product.placeBid(Product.java:80),2021-05-20 13:42:26.0
+models.User.placeBid(User.java:167),2021-05-20 13:42:26.0
+models.Product.placeBid(Product.java:80),2021-05-20 13:42:26.0
+models.Product.buyOut(Product.java:85),2021-05-20 13:42:26.0
+models.User.deleteBid(User.java:190),2021-05-20 13:42:26.0
+models.User.deleteBid(User.java:190),2021-05-20 13:42:26.0
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:42:26.0
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:42:26.0
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.566
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 13:44:12.566
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 13:44:12.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.566
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 13:44:12.566
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.582
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:44:12.582
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.582
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.582
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.582
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.582
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 13:44:12.582
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 13:44:12.582
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:44:12.582
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:44:12.582
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:44:12.582
+models.Auction.addProduct(Auction.java:81),2021-05-20 13:44:12.582
+models.User.placeBid(User.java:167),2021-05-20 13:44:12.597
+models.Product.placeBid(Product.java:80),2021-05-20 13:44:12.597
+models.User.placeBid(User.java:167),2021-05-20 13:44:12.597
+models.Product.placeBid(Product.java:80),2021-05-20 13:44:12.597
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:44:12.597
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:44:12.597
+models.User.placeBid(User.java:167),2021-05-20 13:44:12.597
+models.Product.placeBid(Product.java:80),2021-05-20 13:44:12.597
+models.User.placeBid(User.java:167),2021-05-20 13:44:12.597
+models.Product.placeBid(Product.java:80),2021-05-20 13:44:12.597
+models.Product.buyOut(Product.java:85),2021-05-20 13:44:12.597
+models.User.deleteBid(User.java:190),2021-05-20 13:44:12.597
+models.User.deleteBid(User.java:190),2021-05-20 13:44:12.597
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:44:12.597
+models.Product.getHighestBid(Product.java:75),2021-05-20 13:44:12.597
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.736
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.736
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.736
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.736
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.736
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 14:06:46.752
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 14:06:46.752
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 14:06:46.752
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:06:46.752
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:06:46.752
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:06:46.752
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:06:46.752
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:06:46.752
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:06:46.752
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:06:46.767
+models.User.placeBid(User.java:202),2021-05-20 14:06:46.767
+models.Product.placeBid(Product.java:80),2021-05-20 14:06:46.767
+models.User.placeBid(User.java:202),2021-05-20 14:06:46.767
+models.Product.placeBid(Product.java:80),2021-05-20 14:06:46.767
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:06:46.767
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:06:46.767
+models.User.placeBid(User.java:202),2021-05-20 14:06:46.767
+models.Product.placeBid(Product.java:80),2021-05-20 14:06:46.767
+models.User.placeBid(User.java:202),2021-05-20 14:06:46.767
+models.Product.placeBid(Product.java:80),2021-05-20 14:06:46.767
+models.Product.buyOut(Product.java:85),2021-05-20 14:06:46.767
+models.User.deleteBid(User.java:225),2021-05-20 14:06:46.767
+models.User.deleteBid(User.java:225),2021-05-20 14:06:46.767
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:06:46.767
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:06:46.767
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.819
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.819
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.819
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.819
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.819
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.819
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 14:10:21.835
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 14:10:21.835
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.835
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 14:10:21.835
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.835
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:10:21.835
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.835
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.835
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.835
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.835
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:10:21.835
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:10:21.835
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:10:21.835
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:10:21.835
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:10:21.835
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:10:21.85
+models.User.placeBid(User.java:202),2021-05-20 14:10:21.85
+models.Product.placeBid(Product.java:80),2021-05-20 14:10:21.85
+models.User.placeBid(User.java:202),2021-05-20 14:10:21.85
+models.Product.placeBid(Product.java:80),2021-05-20 14:10:21.85
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:10:21.85
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:10:21.85
+models.User.placeBid(User.java:202),2021-05-20 14:10:21.85
+models.Product.placeBid(Product.java:80),2021-05-20 14:10:21.85
+models.User.placeBid(User.java:202),2021-05-20 14:10:21.85
+models.Product.placeBid(Product.java:80),2021-05-20 14:10:21.85
+models.Product.buyOut(Product.java:85),2021-05-20 14:10:21.85
+models.User.deleteBid(User.java:225),2021-05-20 14:10:21.85
+models.User.deleteBid(User.java:225),2021-05-20 14:10:21.85
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:10:21.85
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:10:21.85
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.177
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.177
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 14:11:15.193
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:11:15.193
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:11:15.193
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:11:15.193
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:11:15.193
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:11:15.193
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:11:15.208
+models.User.placeBid(User.java:202),2021-05-20 14:11:15.208
+models.Product.placeBid(Product.java:80),2021-05-20 14:11:15.208
+models.User.placeBid(User.java:202),2021-05-20 14:11:15.208
+models.Product.placeBid(Product.java:80),2021-05-20 14:11:15.208
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:11:15.208
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:11:15.208
+models.User.placeBid(User.java:202),2021-05-20 14:11:15.208
+models.Product.placeBid(Product.java:80),2021-05-20 14:11:15.208
+models.User.placeBid(User.java:202),2021-05-20 14:11:15.208
+models.Product.placeBid(Product.java:80),2021-05-20 14:11:15.208
+models.Product.buyOut(Product.java:85),2021-05-20 14:11:15.208
+models.User.deleteBid(User.java:225),2021-05-20 14:11:15.208
+models.User.deleteBid(User.java:225),2021-05-20 14:11:15.208
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:11:15.208
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:11:15.208
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.298
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 14:22:26.314
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:22:26.314
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:22:26.314
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:22:26.314
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:22:26.314
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:22:26.314
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:22:26.329
+models.User.placeBid(User.java:225),2021-05-20 14:22:26.329
+models.Product.placeBid(Product.java:80),2021-05-20 14:22:26.329
+models.User.placeBid(User.java:225),2021-05-20 14:22:26.329
+models.Product.placeBid(Product.java:80),2021-05-20 14:22:26.329
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:22:26.329
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:22:26.329
+models.User.placeBid(User.java:225),2021-05-20 14:22:26.329
+models.Product.placeBid(Product.java:80),2021-05-20 14:22:26.329
+models.User.placeBid(User.java:225),2021-05-20 14:22:26.329
+models.Product.placeBid(Product.java:80),2021-05-20 14:22:26.329
+models.Product.buyOut(Product.java:85),2021-05-20 14:22:26.329
+models.User.deleteBid(User.java:248),2021-05-20 14:22:26.329
+models.User.deleteBid(User.java:248),2021-05-20 14:22:26.329
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:22:26.329
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:22:26.329
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.188
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+managers.UserManager.createUser(UserManager.java:72),2021-05-20 14:23:18.204
+managers.UserManager.createAdmin(UserManager.java:84),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+managers.UserManager.createOrganizer(UserManager.java:77),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:23:18.204
+managers.AuctionManager.createAuction(AuctionManager.java:71),2021-05-20 14:23:18.204
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:23:18.219
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:23:18.219
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:23:18.219
+models.Auction.addProduct(Auction.java:81),2021-05-20 14:23:18.219
+models.User.placeBid(User.java:225),2021-05-20 14:23:18.219
+models.Product.placeBid(Product.java:80),2021-05-20 14:23:18.219
+models.User.placeBid(User.java:225),2021-05-20 14:23:18.219
+models.Product.placeBid(Product.java:80),2021-05-20 14:23:18.219
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:23:18.219
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:23:18.219
+models.User.placeBid(User.java:225),2021-05-20 14:23:18.219
+models.Product.placeBid(Product.java:80),2021-05-20 14:23:18.219
+models.User.placeBid(User.java:225),2021-05-20 14:23:18.219
+models.Product.placeBid(Product.java:80),2021-05-20 14:23:18.219
+models.Product.buyOut(Product.java:85),2021-05-20 14:23:18.219
+models.User.deleteBid(User.java:248),2021-05-20 14:23:18.219
+models.User.deleteBid(User.java:248),2021-05-20 14:23:18.219
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:23:18.235
+models.Product.getHighestBid(Product.java:75),2021-05-20 14:23:18.235
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:32:17.739
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:32:17.739
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:33:43.818
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:33:43.818
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:34:01.083
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:34:01.099
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:35:07.64
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:35:07.64
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:37:37.944
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 14:37:37.96
+nume_actiune,timestamp
+nume_actiune,timestamp
+nume_actiune,timestamp
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:73),2021-05-20 14:47:39.54
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:73),2021-05-20 14:48:32.332
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:73),2021-05-20 14:52:41.086
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:73),2021-05-20 14:56:33.817
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:73),2021-05-20 14:58:28.717
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:73),2021-05-20 14:59:00.95
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 19:54:06.667
+managers.UserManager.createUser(UserManager.java:73),2021-05-20 19:54:06.676
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 19:56:33.772
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 19:58:10.311
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 19:58:10.313
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 19:59:06.485
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 19:59:06.485
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 19:59:06.485
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:00:08.172
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:00:08.172
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:00:08.172
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:00:08.172
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:00:38.134
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:00:38.15
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:00:38.15
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:00:38.15
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:01:29.441
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:01:29.441
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:01:29.441
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:01:29.441
+nume_actiune,timestamp
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:02:03.173
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:02:03.173
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:02:03.173
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:02:03.173
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:09:22.332
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:09:51.024
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:12:34.144
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:16:55.739
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:19:00.462
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:19:00.484
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:19:00.484
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:19:59.961
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:19:59.976
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:19:59.976
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:20:52.939
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:20:52.966
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:20:52.966
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:24:04.793
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:24:04.829
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:24:04.829
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:28:28.237
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:28:28.268
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:28:28.268
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:30:31.541
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:30:31.583
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:30:31.583
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:31:37.595
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:31:37.633
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:31:37.633
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:34:08.01
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:34:08.048
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:34:08.048
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:35:15.755
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:35:15.771
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:35:15.771
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:35:35.457
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:35:35.498
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:35:35.498
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:37:01.292
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:37:01.323
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:37:01.323
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:41:31.058
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:41:31.089
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:41:31.089
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:42:53.855
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:42:53.886
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:42:53.886
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:49:19.253
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:49:19.293
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:49:19.293
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:51:44.405
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:51:44.434
+validators.DataValidator.convertToValidDate(DataValidator.java:14),2021-05-20 20:51:44.434
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 20:54:13.003
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:40:14.11
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:41:40.6
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:42:18.772
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:45:12.901
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:46:06.522
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:47:21.348
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:47:45.379
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:48:46.823
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:49:03.228
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:50:43.453
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:52:10.154
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:52:29.865
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:52:40.114
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:53:22.927
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:54:29.45
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:74),2021-05-20 21:55:15.057
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:75),2021-05-20 21:55:47.531
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:79),2021-05-20 21:56:09.182
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:79),2021-05-20 21:56:37.271
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:79),2021-05-20 21:56:49.83
+nume_actiune,timestamp
+nume_actiune,timestamp
+managers.UserManager.createUser(UserManager.java:79),2021-05-20 22:04:10.393

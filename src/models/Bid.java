@@ -8,7 +8,7 @@ public class Bid implements Comparable<Bid> {
     private Date placementDate = new Date();
     private User owner;
     private Product product;
-
+    private int ID;
     public void showBid()
     {
         String leftAlignFormat;

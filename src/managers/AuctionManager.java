@@ -15,66 +15,82 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
 
     /**
      * Returns the index of the biggest value in the collection smaller than the given one, computed by the given function
-     * @param  collection a collection of objects
-     * @param  value the searched value
-     * @param  function a function that when supplied with an object returns a comparable value
+     *
+     * @param collection a collection of objects
+     * @param value      the searched value
+     * @param function   a function that when supplied with an object returns a comparable value
      * @return int    the index
      */
-    private <obj,val extends Comparable<val>> int binarySearch(List<obj> collection, val value, Function<obj,val> function)
-    {
-        int i,step;
+    private <obj, val extends Comparable<val>> int binarySearch(List<obj> collection, val value, Function<obj, val> function) {
+        int i, step;
         int n = collection.size();
-        for(step=1;step<=n;step<<=1);
-        for(i=0; step>0; step>>=1)
-            if(i+step<=n && function.apply(collection.get(i+step)).compareTo(value)<0) //Daca e in limita array-ului si mai mic sau egal decat valoarea cautata
-                i+=step; //Crestem indicele
-        return i+1;
+        for (step = 1; step <= n; step <<= 1) ;
+        for (i = 0; step > 0; step >>= 1)
+            if (i + step <= n && function.apply(collection.get(i + step)).compareTo(value) < 0) //Daca e in limita array-ului si mai mic sau egal decat valoarea cautata
+                i += step; //Crestem indicele
+        return i + 1;
     }
 
     @Override
-    public Auction parse(List<String> obj) {
-        return new Auction(obj.get(0),obj.get(1), DataValidator.convertToValidDate(obj.get(2)), DataValidator.convertToValidDate(obj.get(3)));
+    public Auction parse(Map<String, String> obj) {
+        String organizer = obj.get("ORGANIZER");
+        String auctionName = obj.get("AUCTION NAME");
+        Date startDate = DataValidator.convertToValidDate(obj.get("START DATE"));
+        Date endDate = DataValidator.convertToValidDate(obj.get("END DATE"));
+        return new Auction(organizer, auctionName, startDate, endDate);
     }
-    public Product parseProduct(List<String> obj)
-    {
-        return new Product.ProductBuilder(obj.get(0),obj.get(1)).withStartingPrice(Float.parseFloat(obj.get(2))).withTargetPrice(Float.parseFloat(obj.get(3))).withDescription(obj.get(4)).build();
+
+    public Product parseProduct(Map<String, String> obj) {
+        String name = obj.get("PRODUCT NAME");
+        String owner = obj.get("OWNER");
+        Float startingPrice = Float.parseFloat(obj.get("START PRICE"));
+        Float targetPrice = Float.parseFloat(obj.get("TARGET PRICE"));
+        String description = obj.get("DESCRIPTION");
+
+        return new Product.ProductBuilder(name, owner).withStartingPrice(startingPrice).withTargetPrice(targetPrice).withDescription(description).build();
     }
-    public void populateProducts(List<List<String>> obj)
-    {
-        for (var productString: obj) {
-            findAuction(productString.get(5)).addProduct(parseProduct(productString));
+
+    public void populateProducts(List<Map<String, String>> objs) {
+        for (var productMap : objs) {
+            findAuction(productMap.get("AUCTION NAME")).addProduct(parseProduct(productMap));
         }
     }
-    public Auction insert(Auction auc)
-    {
+
+    public Auction insert(Auction auc) {
         auctions.add(auc);
+        DBManager.insert(auc);
         return auc;
     }
 
-    private AuctionManager(){}
+    private AuctionManager() {
+    }
+
     public static AuctionManager getInstance() {
         if (instance == null)
             instance = new AuctionManager();
         return instance;
     }
+
     public Auction createAuction(String organizer, String name, Date endDate) {
         WriteToFile.log();
-        var auction = new Auction(organizer,name,endDate);
-       return insert(auction);
+        var auction = new Auction(organizer, name, endDate);
+        return insert(auction);
     }
-    public Auction findAuction(String name)
-    {
-        for(var tmp : auctions)
+
+    public Auction findAuction(String name) {
+        for (var tmp : auctions)
             if (tmp.getName().equals(name))
                 return tmp;
 
-            return null;
+        return null;
     }
-    public Auction createAuction(String organizer,String name, Date startDate,Date endDate) {
+
+    public Auction createAuction(String organizer, String name, Date startDate, Date endDate) {
         WriteToFile.log();
-        var auction = new Auction(organizer,name,startDate,endDate);
+        var auction = new Auction(organizer, name, startDate, endDate);
         return insert(auction);
     }
+
     public void index() {
         Collections.sort(auctions);
         System.out.format("+----+-----------------+------------+-------------+%n");
@@ -86,21 +102,22 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
         System.out.format("+----+-----------------+------------+-------------+%n");
         WriteToFile.log();
     }
-    public void delete(Auction toDelete)
-    {
 
-        Function<Auction,Date> cmp = Auction::getStartDate;
-        var index = binarySearch(auctions,toDelete.getStartDate(),cmp);
-        if(auctions.get(index) == toDelete)
+    public void delete(Auction toDelete) {
+
+        Function<Auction, Date> cmp = Auction::getStartDate;
+        var index = binarySearch(auctions, toDelete.getStartDate(), cmp);
+        if (auctions.get(index) == toDelete) {
             auctions.remove(index);
-        else
+            DBManager.delete(toDelete);
+        } else
             System.out.println("De ce incerci sa stergi ceva ce nu exista?");
         WriteToFile.log();
     }
-    public void indexProducts()
-    {
+
+    public void indexProducts() {
         for (int i = 0; i < auctions.size(); i++)
-           auctions.get(i).indexProducts();
+            auctions.get(i).indexProducts();
     }
 
 }

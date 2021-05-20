@@ -7,17 +7,13 @@ import java.util.PriorityQueue;
 public class Product {
 
     public static class ProductBuilder {
-        private static int ID; //UNIQUE, pus automat
+        private int ID; //PK
         private String name; //REQUIRED
         private String owner; //REQUIRED
         private Float startPrice;
         private Float targetPrice;
         private String description;
         private Auction auction;
-
-        static {
-            ID++;
-        }
 
         public ProductBuilder(String name, String owner) {
             this.name = name;

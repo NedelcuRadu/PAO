@@ -1,7 +1,7 @@
 import IOClasses.CSVReader;
 import IOClasses.WriteToFile;
-import databaseConfig.UserDatabaseManager;
 import managers.AuctionManager;
+import managers.DBManager;
 import managers.UserManager;
 import models.Command;
 import models.Product;
@@ -58,12 +58,14 @@ public class Main {
             UserManager userManager = UserManager.getInstance();
             //Citesc users din CSV
             var userStrings = CSVReader.read("users.csv",",");
-            assert userStrings != null;
-            userManager.parseList(userStrings);
 
+
+            userManager.parseList(userStrings);
+            for(var field:User.class.getDeclaredFields())
+            { var fieldName = field.toString();
+            // System.out.println(fieldName.substring(fieldName.lastIndexOf(".")+1));
+                System.out.println(fieldName);}
             var marian = userManager.createUser("Marian", new Date(), "ana");
-            UserDatabaseManager userDatabsae = new UserDatabaseManager();
-            userDatabsae.insert(marian);
             var admin = userManager.createAdmin("admin","admin");
             var organizer = userManager.createOrganizer("London Museum",DataValidator.convertToValidDate("20/03/2021"),"org");
             var a1 =auctionManager.createAuction("London Museum","Paris Paintings", DataValidator.convertToValidDate("23/02/2022"));

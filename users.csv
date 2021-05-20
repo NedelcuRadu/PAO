@@ -1,4 +1,4 @@
-Name,Register Date,Birth Date,Founds,passwordHash
-Ionel,20/03/2021,20/03/2000,1500,ionel123
-Marcel,24/05/2021,18/06/2001,2000,merepere
-Emilia,28/02/2011,01/01/1999,3213,emi4531
+ID,Name,REG_DATE,BIRTH_DATE,FOUNDS,PASSWORD
+1,Ionel,20/03/2021,20/03/2000,1500,ionel123
+2,Marcel,24/05/2021,18/06/2001,2000,merepere
+3,Emilia,28/02/2011,01/01/1999,3213,emi4531

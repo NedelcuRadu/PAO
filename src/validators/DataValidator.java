@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DataValidator {
-    final static String DATE_FORMAT = "dd/MM/yyyy";
+    final static String DATE_FORMAT = "yyyy-MM-dd";
 
     public static Date convertToValidDate(String date) {
         WriteToFile.log();
@@ -19,6 +19,20 @@ public class DataValidator {
         } catch (ParseException e) {
             return null;
         }
+    }
+    public static String convertDateToString(Date date)
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
+        return sdf.format(date);
+    }
+
+    public static String escapeString(String string)
+    {
+        return "\""+string+"\"";
+    }
+    public static String formatDateToString(Date date)
+    {
+        return escapeString(convertDateToString(date));
     }
 }
 

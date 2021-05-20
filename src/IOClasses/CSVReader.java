@@ -3,9 +3,7 @@ package IOClasses;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class CSVReader {
     public static CSVReader instance;
@@ -21,16 +19,30 @@ public class CSVReader {
         return instance;
     }
 
-    public static List<List<String>> read(String fileName, String delimiter) {
+    public static List<Map<String,String>> read(String fileName, String delimiter) {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 
-            List<List<String>> result = new ArrayList<>();
+            List<Map<String,String>> result = new ArrayList<>();
+            boolean headerRow = true;
+            List<String> props = null;
             String line;
             while ((line = br.readLine()) != null) {
-                String[] values = line.split(delimiter);
-                result.add(Arrays.asList(values));
+                if (headerRow)
+                {
+                    line = line.toUpperCase(Locale.ROOT);
+                    headerRow = false;
+                    props = Arrays.asList(line.split(delimiter));
+                }
+                else
+                {
+                    String[] values = line.split(delimiter);
+                    Map<String,String> propsMap = new HashMap<String, String>();
+                    for (int i = 0; i < props.size(); i++) {
+                        propsMap.put(props.get(i),values[i]);
+                    }
+                    result.add(propsMap);
+                }
             }
-            result.remove(0);
             return result;
         } catch (IOException e) {
             e.printStackTrace();

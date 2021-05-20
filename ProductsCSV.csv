@@ -1,4 +1,4 @@
-models.Product Name,Owner,Start Price,Target Price,Description,models.Auction Name
+Product Name,Owner,Start Price,Target Price,Description,Auction Name
 Leonidas' Spear,Marian,1000,2000,The spear of Leonidas,Roman Treasures
 Van Gogh Painting,Emilia,1400,2800,A painting,Paris Paintings
 Nero's Helmet,Ionel,1500,3000,The helmet of Nero,Roman Treasures
