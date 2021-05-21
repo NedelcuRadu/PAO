@@ -24,18 +24,12 @@ public class User extends Model{
     {
         return "USERS";
     }
-    public User parse(Map<String ,String> obj)
-    {
-
-        User tmp = new User();
-        tmp.setInfo(obj);
-        return tmp;
-    }
     @Override
     public Map<String, String> getValues() {
         Map<String,String> values = new HashMap<>();
         String formattedRegDate = DataValidator.formatDateToString(getRegisterDate());
         String formattedBirthDate = DataValidator.formatDateToString(getBirthDate());
+        System.out.println(formattedBirthDate + " " + formattedRegDate);
         values.put("ID",getPK());
         values.put("REG_DATE",formattedRegDate);
         values.put("BIRTH_DATE",formattedBirthDate);
@@ -49,7 +43,6 @@ public class User extends Model{
         String name = obj.get("ID");
         Date registerDate = DataValidator.convertToValidDate(obj.get("REG_DATE"));
         Date birthDate = DataValidator.convertToValidDate(obj.get("BIRTH_DATE"));
-        System.out.println(birthDate);
         Float founds = Float.parseFloat(obj.get("FOUNDS"));
         String passwordHash = obj.get("PASSWORD");
         this.setPasswordHash(passwordHash);
@@ -72,7 +65,6 @@ public class User extends Model{
             stmt.append(registerDate).append(");");
         else
             stmt.append("DEFAULT);");
-        System.out.println(stmt.toString());
         return stmt.toString();
     }
     public void setPK(String name)

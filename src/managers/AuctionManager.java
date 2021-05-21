@@ -4,6 +4,7 @@ import IOClasses.Parse;
 import IOClasses.WriteToFile;
 import models.Auction;
 import models.Product;
+import models.User;
 import validators.DataValidator;
 
 import java.util.*;
@@ -26,17 +27,18 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
         int n = collection.size();
         for (step = 1; step <= n; step <<= 1) ;
         for (i = 0; step > 0; step >>= 1)
-            if (i + step <= n && function.apply(collection.get(i + step)).compareTo(value) < 0) //Daca e in limita array-ului si mai mic sau egal decat valoarea cautata
+            if (i + step < n && function.apply(collection.get(i + step)).compareTo(value) < 0) //Daca e in limita array-ului si mai mic sau egal decat valoarea cautata
                 i += step; //Crestem indicele
         return i + 1;
     }
 
     @Override
     public Auction parse(Map<String, String> obj) {
-        String organizer = obj.get("ORGANIZER");
-        String auctionName = obj.get("AUCTION NAME");
-        Date startDate = DataValidator.convertToValidDate(obj.get("START DATE"));
-        Date endDate = DataValidator.convertToValidDate(obj.get("END DATE"));
+        String organizer = obj.get("USER_ID");
+        UserManager.getInstance().promoteToOrganizer(organizer);
+        String auctionName = obj.get("ID");
+        Date startDate = DataValidator.convertToValidDate(obj.get("START_DATE"));
+        Date endDate = DataValidator.convertToValidDate(obj.get("END_DATE"));
         return new Auction(organizer, auctionName, startDate, endDate);
     }
 
@@ -58,7 +60,6 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
 
     public Auction insert(Auction auc) {
         auctions.add(auc);
-        DBManager.insert(auc);
         return auc;
     }
 
@@ -74,7 +75,11 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     public Auction createAuction(String organizer, String name, Date endDate) {
         WriteToFile.log();
         var auction = new Auction(organizer, name, endDate);
-        return insert(auction);
+        var insertedAuction = DBManager.insert(auction);
+        if (insertedAuction != null)
+            return insert(insertedAuction);
+
+        return null;
     }
 
     public Auction findAuction(String name) {
@@ -88,14 +93,18 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     public Auction createAuction(String organizer, String name, Date startDate, Date endDate) {
         WriteToFile.log();
         var auction = new Auction(organizer, name, startDate, endDate);
-        return insert(auction);
+        var insertedAuction = DBManager.insert(auction);
+        if (insertedAuction != null)
+            return insert(insertedAuction);
+
+        return null;
     }
 
     public void index() {
         Collections.sort(auctions);
-        System.out.format("+----+-----------------+------------+-------------+%n");
-        System.out.format("| ID |       NAME      | START DATE |   END DATE  |%n");
-        System.out.format("+----+-----------------+------------+-------------+%n");
+        System.out.format("+-------------+-----------------+------------+-------------+%n");
+        System.out.format("|     OWNER   |       NAME      | START DATE |   END DATE  |%n");
+        System.out.format("+-------------+-----------------+------------+-------------+%n");
 
         for (int i = 0; i < auctions.size(); i++)
             System.out.println(auctions.get(i).toString(i));
@@ -104,7 +113,8 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     }
 
     public void delete(Auction toDelete) {
-
+        if (toDelete==null)
+            return;
         Function<Auction, Date> cmp = Auction::getStartDate;
         var index = binarySearch(auctions, toDelete.getStartDate(), cmp);
         if (auctions.get(index) == toDelete) {

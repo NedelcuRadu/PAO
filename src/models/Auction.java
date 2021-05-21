@@ -2,6 +2,7 @@ package models;
 
 import IOClasses.WriteToFile;
 import managers.AuctionManager;
+import managers.DBManager;
 import managers.UserManager;
 import validators.DataValidator;
 
@@ -56,30 +57,36 @@ public class Auction extends Model implements Comparable<Auction> {
 
     public void setStartDate(Date startDate) {
         this.startDate = (Date) this.startDate.clone();
+        DBManager.update(this);
     }
 
     public Date getEndDate() {
         return (Date) this.endDate.clone();
+
     }
 
     public void setEndDate(Date endDate) {
         this.endDate = (Date) endDate.clone();
+        DBManager.update(this);
     }
-    public void setOrganizer(Organizer organizer)
-    {
-        this.organizer =  organizer;
+
+    public void setOrganizer(Organizer organizer) {
+        this.organizer = organizer;
+        DBManager.update(this);
     }
-    public void setOrganizer(String organizer_id)
-    {
+
+    public void setOrganizer(String organizer_id) {
         var foundUser = UserManager.getInstance().findUser(organizer_id);
-        if (foundUser instanceof Organizer)
+        if (foundUser instanceof Organizer) {
             this.organizer = (Organizer) foundUser;
-        else System.out.println("No organizer with name " + organizer);
+            DBManager.update(this);
+        } else System.out.println("No organizer with name " + organizer);
     }
-    public String getOrganizerId()
-    {
+
+    public String getOrganizerId() {
         return organizer.getPK();
     }
+
     public List<Product> getProducts() {
         return this.productList;
     }
@@ -87,7 +94,12 @@ public class Auction extends Model implements Comparable<Auction> {
     public String getName() {
         return name;
     }
-    public void setName(String name){this.name = name;}
+
+    public void setName(String name) {
+        this.name = name;
+        DBManager.update(this);
+    }
+
     public void setProducts(List<Product> products) {
         this.productList = products;
     }
@@ -117,9 +129,9 @@ public class Auction extends Model implements Comparable<Auction> {
     }
 
     public String toString(int index) {
-        String leftAlignFormat = "| %-2d | %-15s | %te %<tb %<tY | %te %<tb %<tY |";
+        String leftAlignFormat = "| %-15s | %-15s | %te %<tb %<tY | %te %<tb %<tY |";
         Formatter fmt = new Formatter();
-        fmt.format(leftAlignFormat, index, name, startDate, endDate);
+        fmt.format(leftAlignFormat, organizer.getPK(), name, startDate, endDate);
         return fmt.toString();
     }
 
@@ -128,17 +140,17 @@ public class Auction extends Model implements Comparable<Auction> {
             System.out.println(product);
         }
     }
-    public Product findProduct(String productName)
-    {
-        for(var product:productList)
+
+    public Product findProduct(String productName) {
+        for (var product : productList)
             if (productName.equals(product.getName()))
                 return product;
-            return null;
+        return null;
     }
 
     @Override
     public String getPK() {
-        return name;
+        return DataValidator.escapeString(name);
     }
 
     @Override
@@ -148,14 +160,14 @@ public class Auction extends Model implements Comparable<Auction> {
 
     @Override
     public String getInsertStatement() {
-        StringBuilder stmt =  new StringBuilder("INSERT INTO AUCTIONS VALUES (DEFAULT,");
+        StringBuilder stmt = new StringBuilder("INSERT INTO AUCTIONS VALUES (");
         String formattedName = DataValidator.escapeString(getName());
         String startDate = DataValidator.formatDateToString(getStartDate());
         String endDate = DataValidator.formatDateToString(getEndDate());
         stmt.append(formattedName).append(",");
         stmt.append(startDate).append(",");
         stmt.append(endDate).append(",");
-        stmt.append(getOrganizerId());
+        stmt.append(getOrganizerId()).append(")");
         System.out.println(stmt.toString());
         return stmt.toString();
     }
@@ -167,21 +179,20 @@ public class Auction extends Model implements Comparable<Auction> {
 
     @Override
     public Map<String, String> getValues() {
-        Map<String,String> values = new HashMap<>();
+        Map<String, String> values = new HashMap<>();
         String formattedStartDate = DataValidator.formatDateToString(getStartDate());
         String formattedEndDate = DataValidator.formatDateToString(getEndDate());
-        values.put("ID",getPK());
-        values.put("NAME",DataValidator.escapeString(name));
-        values.put("START_DATE",formattedStartDate);
-        values.put("END_DATE",formattedEndDate);
-        values.put("USER_ID",organizer.getPK());
+        values.put("ID", getPK());
+        values.put("START_DATE", formattedStartDate);
+        values.put("END_DATE", formattedEndDate);
+        values.put("USER_ID", organizer.getPK());
         return values;
     }
 
     @Override
     public void setInfo(Map<String, String> obj) {
-        String organizer = obj.get("ORGANIZER");
-        String auctionName = obj.get("AUCTION_NAME");
+        String organizer = obj.get("USER_ID");
+        String auctionName = obj.get("ID");
         Date startDate = DataValidator.convertToValidDate(obj.get("START_DATE"));
         Date endDate = DataValidator.convertToValidDate(obj.get("END_DATE"));
         setOrganizer(organizer);

@@ -8,6 +8,7 @@ import models.User;
 import validators.DataValidator;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,7 +16,7 @@ import java.util.function.BiConsumer;
 
 public class UserManager implements Manager<User>, Parse<User> {
     private static UserManager instance;
-    private Map<String, User> userMap = new ConcurrentHashMap<>(); //TO DO: Threads
+    private Map<String, User> userMap = new HashMap<>(); //TO DO: Threads
 
     private UserManager() {
     }
@@ -30,13 +31,12 @@ public class UserManager implements Manager<User>, Parse<User> {
 
     @Override
     public User parse(Map<String, String> obj) {
-        String name = obj.get("NAME");
+        String name = obj.get("ID");
         Date registerDate = DataValidator.convertToValidDate(obj.get("REG_DATE"));
         Date birthDate = DataValidator.convertToValidDate(obj.get("BIRTH_DATE"));
         Float founds = Float.parseFloat(obj.get("FOUNDS"));
         String passwordHash = obj.get("PASSWORD");
-        User tmp = new User(name, registerDate, birthDate, founds, passwordHash);
-        return tmp;
+        return new User(name, registerDate, birthDate, founds, passwordHash);
     }
 
     public boolean existsUser(String username) {
@@ -45,8 +45,21 @@ public class UserManager implements Manager<User>, Parse<User> {
     }
 
     public User findUser(String id) {
-        return userMap.get(id);
+        return userMap.get(DataValidator.escapeString(id));
     }
+
+    public void promoteToOrganizer(String id) {
+        User toPromote = findUser(id);
+        if (toPromote == null)
+        {
+            System.out.println("Didn't find the user to promote");
+            return;
+        }
+        userMap.remove(toPromote.getPK());
+        Organizer tmp = new Organizer(toPromote.getName(),toPromote.getRegisterDate(),toPromote.getBirthDate(),toPromote.getFounds(),toPromote.getPasswordHash());
+        userMap.put(tmp.getPK(), tmp);
+    }
+
 
     public static UserManager getInstance() {
         if (instance == null)
@@ -55,42 +68,49 @@ public class UserManager implements Manager<User>, Parse<User> {
     }
 
     public User insert(User tmp) {
-        tmp.setRegisterDate(new Date());
-        tmp = DBManager.insert(tmp);
-        if (tmp != null)
+        if (tmp != null) {
+            if (tmp.getRegisterDate() == null)
+                tmp.setRegisterDate(new Date());
             userMap.put(tmp.getPK(), tmp);
+        }
         return tmp;
     }
 
     public User createUser(String name, Date registerDate, Date birthDate, Float founds, String password) {
         WriteToFile.log();
         var newUser = new User(name, registerDate, birthDate, founds, password);
+        DBManager.insert(newUser);
         return insert(newUser);
     }
 
     public User createUser(String name, Date birthDate, Float founds, String password) {
         WriteToFile.log();
         var newUser = new User(name, birthDate, founds, password);
+        DBManager.insert(newUser);
         return insert(newUser);
     }
 
     public User createUser(String name, Date birthDate, String password) {
         var newUser = new User(name, birthDate, password);
         WriteToFile.log();
+        DBManager.insert(newUser);
         return insert(newUser);
     }
 
     public Organizer createOrganizer(String name, Date birthDate, String password) {
         WriteToFile.log();
         var newUser = new Organizer(name, birthDate, password);
+        DBManager.insert(newUser);
         userMap.put(name, newUser);
         return newUser;
     }
+
 
     public User createAdmin(String name, String password) {
         WriteToFile.log();
         var newAdmin = new Admin(name, password);
         userMap.put(name, newAdmin);
+        DBManager.insert(newAdmin);
         return newAdmin;
     }
 
@@ -108,7 +128,7 @@ public class UserManager implements Manager<User>, Parse<User> {
 
     public void delete(User toDelete) {
         WriteToFile.log();
-        userMap.remove(toDelete.getName());
+        userMap.remove(toDelete.getPK());
         DBManager.delete(toDelete);
     }
 

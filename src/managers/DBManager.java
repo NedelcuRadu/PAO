@@ -49,6 +49,7 @@ public class DBManager {
     }
     public static <T extends Model> void delete(String id, String tableName) {
         String deleteSql = "DELETE FROM " + tableName + " WHERE ID = "+ DataValidator.escapeString(id);
+        System.out.println("Executing: "+deleteSql);
         Connection connection = DatabaseConfiguration.getDatabaseConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(deleteSql);
@@ -148,11 +149,11 @@ public class DBManager {
         //region Index
         var results =  DBManager.index("USERS");
         assert results != null;
-        for (var result:results)
-            System.out.println(result);
         //endregion
         //region Insert
         var userManager = UserManager.getInstance();
+        userManager.parseList(results);
+        userManager.index();
         var marian = userManager.createUser("Marian Andrei Honcea7", new Date(), "ana");
         var marianID = "Marian Andrei Honcea7";
         //region Index After Insert
@@ -167,7 +168,7 @@ public class DBManager {
         marian.addFounds(340f);
         // endregion
         //region Delete
-        DBManager.delete(marianID,"USERS");
+        userManager.delete(marian);
         //endregion
         //region Find
         Optional<User> found = DBManager.findById(new User(),marianID); //Marian e sters, nu il mai gaseste
@@ -176,16 +177,32 @@ public class DBManager {
     }
 
 
-    public static void mainAuc(String[] args) {
+    public static void mainAuctions(String[] args) {
         WriteToFile.writeLn("logging.txt","nume_actiune,timestamp");
-
+        var auctionManager = AuctionManager.getInstance();
+        var userManager = UserManager.getInstance();
         //region Index
-        var results =  DBManager.index("AUCTIONS");
+        var results = DBManager.index("USERS");
+        userManager.parseList(results);
+        //userManager.index(); #Acum am userii in cache
+        results =  DBManager.index("AUCTIONS");
         assert results != null;
         for (var result:results)
             System.out.println(result);
+        auctionManager.parseList(results);
+        auctionManager.index();
+
         //endregion
         //region Insert
+        var newAuction = AuctionManager.getInstance().createAuction("Dorin Hana","Insert Test v14",DataValidator.convertToValidDate("2021-12-20"));
+        auctionManager.index();
+        auctionManager.delete(newAuction);
 
+        //endregion
+
+        //region Update
+        newAuction.setName("Insert Test Updated v1");
+        auctionManager.index();
+        //endregion
     }
 }
