@@ -125,7 +125,13 @@ public class UserManager implements Manager<User>, Parse<User> {
         System.out.format("+--------+-----------------+--------------+----------+%n");
         WriteToFile.log();
     }
-
+    public void indexProducts() {
+        BiConsumer<String, User> printConsumer = (key, value) -> {
+           value.indexProducts();
+        };
+        userMap.forEach(printConsumer);
+        WriteToFile.log();
+    }
     public void delete(User toDelete) {
         WriteToFile.log();
         userMap.remove(toDelete.getPK());

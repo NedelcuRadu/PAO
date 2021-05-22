@@ -3,6 +3,7 @@ package managers;
 import IOClasses.WriteToFile;
 import databaseConfig.DatabaseConfiguration;
 import models.Model;
+import models.Product;
 import models.User;
 import org.jetbrains.annotations.NotNull;
 import validators.DataValidator;
@@ -16,6 +17,7 @@ public class DBManager {
         {
             String insertSql = obj.getInsertStatement();
             Connection connection = DatabaseConfiguration.getDatabaseConnection();
+            System.out.println("Executing: " + insertSql);
             try {
                 PreparedStatement preparedStatement = connection.prepareStatement(insertSql, Statement.RETURN_GENERATED_KEYS);
                 int rowCount = preparedStatement.executeUpdate();
@@ -23,14 +25,17 @@ public class DBManager {
                     System.out.println("Failed the following statement: " + insertSql);
                     return null;
                 }
+                ResultSet rs = preparedStatement.getGeneratedKeys();
+                if (rs.next()) {
+                    var newId = rs.getString(1);
+                    obj.setPK(newId);
                     return obj;
+                }
 
-            }
-            catch (SQLIntegrityConstraintViolationException e)
-            {
-                System.out.println("There is already an entry with the primary key "+obj.getPK());
-            }
-            catch (SQLException e) {
+
+            } catch (SQLIntegrityConstraintViolationException e) {
+                System.out.println("There is already an entry with the primary key " + obj.getPK());
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
@@ -47,9 +52,10 @@ public class DBManager {
             e.printStackTrace();
         }
     }
+
     public static <T extends Model> void delete(String id, String tableName) {
-        String deleteSql = "DELETE FROM " + tableName + " WHERE ID = "+ DataValidator.escapeString(id);
-        System.out.println("Executing: "+deleteSql);
+        String deleteSql = "DELETE FROM " + tableName + " WHERE ID = " + DataValidator.escapeString(id);
+        System.out.println("Executing: " + deleteSql);
         Connection connection = DatabaseConfiguration.getDatabaseConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(deleteSql);
@@ -61,7 +67,7 @@ public class DBManager {
 
     public static <T extends Model> T update(@NotNull T newObj) {
         Map<String, String> props = newObj.getValues();
-        String baseQuery = "UPDATE " + newObj.getTableName() +" SET ";
+        String baseQuery = "UPDATE " + newObj.getTableName() + " SET ";
         StringBuilder updateSql = new StringBuilder(baseQuery);
         for (var prop : props.keySet()) {
             updateSql.append(prop).append(" = ").append(props.get(prop)).append(", ");
@@ -71,7 +77,7 @@ public class DBManager {
         Connection connection = DatabaseConfiguration.getDatabaseConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(updateSql.toString());
-            System.out.println("Executing "+ updateSql.toString());
+            System.out.println("Executing " + updateSql.toString());
             int rowCount = preparedStatement.executeUpdate();
             if (rowCount > 0) {
                 return newObj;
@@ -81,15 +87,16 @@ public class DBManager {
         }
         return null;
     }
-    public static <T extends Model> T createOrFind(T obj)
-    {
+
+    public static <T extends Model> T createOrFind(T obj) {
         var tmp = insert(obj); // Try to create the object
         if (tmp == null) // If it's null, it means it already exists
-            findById(obj,obj.getPK());
+            findById(obj, obj.getPK());
         return obj;
     }
+
     public static <T extends Model> Optional<T> findById(T obj, String id) {
-        String selectSql = "SELECT * FROM "+obj.getTableName()+" WHERE ID = ?";
+        String selectSql = "SELECT * FROM " + obj.getTableName() + " WHERE ID = ?";
         Connection connection = DatabaseConfiguration.getDatabaseConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(selectSql);
@@ -143,11 +150,11 @@ public class DBManager {
         return null;
     }
 
-    public static void main(String[] args) {
-        WriteToFile.writeLn("logging.txt","nume_actiune,timestamp");
+    public static void mainUsers(String[] args) {
+        WriteToFile.writeLn("logging.txt", "nume_actiune,timestamp");
 
         //region Index
-        var results =  DBManager.index("USERS");
+        var results = DBManager.index("USERS");
         assert results != null;
         //endregion
         //region Insert
@@ -157,9 +164,9 @@ public class DBManager {
         var marian = userManager.createUser("Marian Andrei Honcea7", new Date(), "ana");
         var marianID = "Marian Andrei Honcea7";
         //region Index After Insert
-        var resultsAfterInsert =  DBManager.index("USERS");
+        var resultsAfterInsert = DBManager.index("USERS");
         assert resultsAfterInsert != null;
-        for (var result:resultsAfterInsert)
+        for (var result : resultsAfterInsert)
             System.out.println(result);
         //endregion
         //endregion
@@ -171,30 +178,30 @@ public class DBManager {
         userManager.delete(marian);
         //endregion
         //region Find
-        Optional<User> found = DBManager.findById(new User(),marianID); //Marian e sters, nu il mai gaseste
+        Optional<User> found = DBManager.findById(new User(), marianID); //Marian e sters, nu il mai gaseste
         System.out.println(found);
         //endregion
     }
 
 
     public static void mainAuctions(String[] args) {
-        WriteToFile.writeLn("logging.txt","nume_actiune,timestamp");
+        WriteToFile.writeLn("logging.txt", "nume_actiune,timestamp");
         var auctionManager = AuctionManager.getInstance();
         var userManager = UserManager.getInstance();
         //region Index
         var results = DBManager.index("USERS");
         userManager.parseList(results);
         //userManager.index(); #Acum am userii in cache
-        results =  DBManager.index("AUCTIONS");
+        results = DBManager.index("AUCTIONS");
         assert results != null;
-        for (var result:results)
+        for (var result : results)
             System.out.println(result);
         auctionManager.parseList(results);
         auctionManager.index();
 
         //endregion
         //region Insert
-        var newAuction = AuctionManager.getInstance().createAuction("Dorin Hana","Insert Test v14",DataValidator.convertToValidDate("2021-12-20"));
+        var newAuction = AuctionManager.getInstance().createAuction("Dorin Hana", "Insert Test v14", DataValidator.convertToValidDate("2021-12-20"));
         auctionManager.index();
         auctionManager.delete(newAuction);
 
@@ -204,5 +211,39 @@ public class DBManager {
         newAuction.setName("Insert Test Updated v1");
         auctionManager.index();
         //endregion
+    }
+
+    public static void mainProducts(String[] args) {
+        WriteToFile.writeLn("logging.txt", "nume_actiune,timestamp");
+        var auctionManager = AuctionManager.getInstance();
+        var userManager = UserManager.getInstance();
+        //region Index
+        var results = DBManager.index("USERS");
+        userManager.parseList(results);
+        //userManager.index(); #Acum am userii in cache
+        results = DBManager.index("AUCTIONS");
+        auctionManager.parseList(results);
+
+        results = DBManager.index("PRODUCTS");
+        auctionManager.populateProducts(results);
+        auctionManager.indexProducts(); //Produsele care sunt in auctions (exista produse care sunt doar la users)
+        System.out.println("ALL PRODUCTS");
+        userManager.indexProducts(); //Toate produsele (nu exista produs fara owner)
+        //endregion
+
+        //region Insert
+        var newProduct = new Product.ProductBuilder("Spear4", "Giorgia Phelps", 240f).build(); //Fac un produs
+        userManager.indexProducts(); //Toate produsele (nu exista produs fara owner)
+        newProduct = DBManager.insert(newProduct);
+        newProduct.setBoughtPrice(500f);
+        //endregion
+        //region Delete
+        //DBManager.delete(newProduct);
+        //endregion
+
+    }
+
+    public static void mainBids(String[] args) {
+
     }
 }

@@ -79,7 +79,7 @@ public class Main {
             assert productStrings!=null;
             auctionManager.populateProducts(productStrings);
             auctionManager.indexProducts();
-            Product p1 = new Product.ProductBuilder("Spear","Marian").build(); //Fac un produs
+            Product p1 = new Product.ProductBuilder("Spear","Marian",130f).build(); //Fac un produs
             a1.addProduct(p1); // Il adaug la licitatie
             marian.addFounds(30000f);
             admin.addFounds(500f);

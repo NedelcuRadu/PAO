@@ -43,18 +43,30 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     }
 
     public Product parseProduct(Map<String, String> obj) {
-        String name = obj.get("PRODUCT NAME");
+        String name = obj.get("NAME");
         String owner = obj.get("OWNER");
-        Float startingPrice = Float.parseFloat(obj.get("START PRICE"));
-        Float targetPrice = Float.parseFloat(obj.get("TARGET PRICE"));
+        Integer id = Integer.parseInt(obj.get("ID"));
+        String tmp = obj.get("TARGET_PRICE");
+        Float targetPrice = null;
+        Float boughtPrice = null;
+        if (tmp!=null)
+           targetPrice = Float.parseFloat(tmp);
+        tmp = obj.get("BOUGHT_PRICE");
+        if (tmp!=null)
+            boughtPrice = Float.parseFloat(tmp);
+        Float startingPrice = Float.parseFloat(obj.get("START_PRICE"));
         String description = obj.get("DESCRIPTION");
-
-        return new Product.ProductBuilder(name, owner).withStartingPrice(startingPrice).withTargetPrice(targetPrice).withDescription(description).build();
+        return new Product.ProductBuilder(name, owner,startingPrice).withID(id).withTargetPrice(targetPrice).withDescription(description).withBoughtPrice(boughtPrice).build();
     }
 
     public void populateProducts(List<Map<String, String>> objs) {
         for (var productMap : objs) {
-            findAuction(productMap.get("AUCTION NAME")).addProduct(parseProduct(productMap));
+            var auctionName = productMap.get("AUCTION_ID");
+            var ownerID = productMap.get("OWNER");
+            var parsedProduct = parseProduct(productMap);
+            if (auctionName!=null)
+            findAuction(auctionName).addProduct(parsedProduct);
+            UserManager.getInstance().findUser(ownerID).addProduct(parsedProduct);
         }
     }
 
@@ -83,6 +95,7 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     }
 
     public Auction findAuction(String name) {
+        System.out.println("Searching for "+name);
         for (var tmp : auctions)
             if (tmp.getName().equals(name))
                 return tmp;
@@ -103,7 +116,7 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     public void index() {
         Collections.sort(auctions);
         System.out.format("+-------------+-----------------+------------+-------------+%n");
-        System.out.format("|     OWNER   |       NAME      | START DATE |   END DATE  |%n");
+        System.out.format("|  ORGANIZER  |       NAME      | START DATE |   END DATE  |%n");
         System.out.format("+-------------+-----------------+------------+-------------+%n");
 
         for (int i = 0; i < auctions.size(); i++)

@@ -29,11 +29,11 @@ public class Organizer extends User {
     }
 
     public Product registerProduct(String name, Float startingPrice) {
-        return new Product.ProductBuilder(name, this.getName()).withStartingPrice(startingPrice).build(); //Fac un produs
+        return new Product.ProductBuilder(name, this.getName(),startingPrice).build(); //Fac un produs
     }
 
     public Product registerProduct(String name, Float startingPrice, Float targetPrice) {
-        return new Product.ProductBuilder(name, this.getName()).withTargetPrice(targetPrice).withStartingPrice(startingPrice).build(); //Fac un produs
+        return new Product.ProductBuilder(name, this.getName(),startingPrice).withTargetPrice(targetPrice).build(); //Fac un produs
     }
 
     public Auction createAuction(String name, Date endDate) {

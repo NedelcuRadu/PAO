@@ -5,9 +5,10 @@ import managers.AuctionManager;
 import managers.DBManager;
 import models.Command;
 import validators.DataValidator;
+
 import java.util.*;
 
-public class User extends Model{
+public class User extends Model {
     private String name; //Required
     private Date registerDate; //Required - default data apelarii
     private Date birthDate; //Required
@@ -20,26 +21,26 @@ public class User extends Model{
 
     }
 
-    public String getTableName()
-    {
+    public String getTableName() {
         return "USERS";
     }
+
     @Override
     public Map<String, String> getValues() {
-        Map<String,String> values = new HashMap<>();
+        Map<String, String> values = new HashMap<>();
         String formattedRegDate = DataValidator.formatDateToString(getRegisterDate());
         String formattedBirthDate = DataValidator.formatDateToString(getBirthDate());
         System.out.println(formattedBirthDate + " " + formattedRegDate);
-        values.put("ID",getPK());
-        values.put("REG_DATE",formattedRegDate);
-        values.put("BIRTH_DATE",formattedBirthDate);
-        values.put("FOUNDS",founds.toString());
-        values.put("PASSWORD",DataValidator.escapeString(passwordHash));
+        values.put("ID", getPK());
+        values.put("REG_DATE", formattedRegDate);
+        values.put("BIRTH_DATE", formattedBirthDate);
+        values.put("FOUNDS", founds.toString());
+        values.put("PASSWORD", DataValidator.escapeString(passwordHash));
         return values;
     }
 
     @Override
-    public void setInfo(Map<String,String> obj) {
+    public void setInfo(Map<String, String> obj) {
         String name = obj.get("ID");
         Date registerDate = DataValidator.convertToValidDate(obj.get("REG_DATE"));
         Date birthDate = DataValidator.convertToValidDate(obj.get("BIRTH_DATE"));
@@ -52,30 +53,30 @@ public class User extends Model{
         this.setName(name);
     }
 
-    public String getInsertStatement()
-    {
-        StringBuilder stmt =  new StringBuilder("INSERT INTO USERS VALUES (");
+    public String getInsertStatement() {
+        StringBuilder stmt = new StringBuilder("INSERT INTO USERS VALUES (");
         String registerDate = DataValidator.escapeString(DataValidator.convertDateToString(this.getRegisterDate()));
-        String birthDate =  DataValidator.escapeString(DataValidator.convertDateToString(this.getBirthDate()));
+        String birthDate = DataValidator.escapeString(DataValidator.convertDateToString(this.getBirthDate()));
         stmt.append(DataValidator.escapeString(this.getName())).append(",");
         stmt.append(birthDate).append(",");
         stmt.append(this.getFounds().toString()).append(",");
         stmt.append(DataValidator.escapeString(this.getPasswordHash())).append(",");
-        if (this.registerDate!=null)
+        if (this.registerDate != null)
             stmt.append(registerDate).append(");");
         else
             stmt.append("DEFAULT);");
         return stmt.toString();
     }
-    public void setPK(String name)
-    {
+
+    public void setPK(String name) {
         this.name = name;
         DBManager.update(this);
     }
-    public String getPK()
-    {
+
+    public String getPK() {
         return DataValidator.escapeString(name);
     }
+
     protected User(String name, String password) {
         this.name = name;
         this.passwordHash = password;
@@ -210,16 +211,16 @@ public class User extends Model{
         return this;
     }
 
-    public void indexProducts() // TO DO
-    {
-        System.out.format("+------+--------+-----------------+--------------+----------+%n");
-        System.out.format("|  ID  |  NAME  |  START PRICE  |  BIRTH DATE  |  FOUNDS  |%n");
-        System.out.format("+------+--------+-----------------+--------------+----------+%n");
-        for (int i = 0; i < productsList.size(); i++)
-            System.out.println(productsList.get(i).toString());
-        System.out.format("+------+--------+-----------------+--------------+----------+%n");
-        for (var product : productsList)
-            System.out.print(product);
+    public void indexProducts() {
+        System.out.println("Products for " + name + ":");
+        if (productsList.size() > 0) {
+            System.out.format("+------------+---------------+----------------+----------------+-----------+%n");
+            System.out.format("| ITEM NAME  |  START PRICE  |  TARGET PRICE  |  BOUGHT PRICE  |   OWNER   |%n");
+            System.out.format("+------------+---------------+----------------+----------------+-----------+%n");
+            for (Product product : productsList) System.out.println(product.toString());
+            System.out.format("+------+--------+-----------------+--------------+----------+%n");
+        } else
+            System.out.println("None");
     }
 
     public void indexBids() {
@@ -257,6 +258,10 @@ public class User extends Model{
     public void deleteBid(Product product) {
         WriteToFile.log();
         bidList.remove(product);
+    }
+
+    public void addProduct(Product product) {
+        productsList.add(product);
     }
 
     @Override

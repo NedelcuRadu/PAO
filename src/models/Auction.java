@@ -195,10 +195,12 @@ public class Auction extends Model implements Comparable<Auction> {
         String auctionName = obj.get("ID");
         Date startDate = DataValidator.convertToValidDate(obj.get("START_DATE"));
         Date endDate = DataValidator.convertToValidDate(obj.get("END_DATE"));
-        setOrganizer(organizer);
-        setName(auctionName);
-        setStartDate(startDate);
-        setEndDate(endDate);
+        var foundUser = UserManager.getInstance().findUser(organizer);
+        if (foundUser instanceof Organizer)
+            this.organizer = (Organizer) foundUser;
+        this.name = auctionName;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
 }
