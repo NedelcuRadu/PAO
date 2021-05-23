@@ -242,6 +242,7 @@ public class User extends Model {
             founds -= amount;
             Bid newBid = new Bid(this, amount, product);
             product.placeBid(newBid);
+            System.out.println("Trying to place bid for "+product);
             bidList.put(product, newBid);
             DBManager.insert(newBid);
         } else
@@ -290,12 +291,13 @@ public class User extends Model {
     }
 
     public Product findProduct(String productID) {
-        System.out.println("In user " + this.getName());
-        System.out.println("Searching for: " + productID);
-        return productsList.stream().filter(x -> {
-            System.out.println(x.getPK());
+       // System.out.println("In user " + this.getName());
+        //System.out.println("Searching for: " + productID);
+        var found = productsList.stream().filter(x -> {
+           // System.out.println(x.getPK());
             return x.getPK().equals(productID);
-        }).findFirst().get();
+        }).findFirst();
+        return found.orElse(null);
     }
 
     @Override

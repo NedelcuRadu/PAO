@@ -43,11 +43,13 @@ public class UserManager implements Manager<User>, Parse<User> {
     }
 
     public User findUser(String id) {
+       // System.out.println(userMap);
         return userMap.get(DataValidator.escapeString(id));
     }
 
     public void promoteToOrganizer(String id) {
         User toPromote = findUser(id);
+        //System.out.println("Searching for "+id);
         if (toPromote == null) {
             System.out.println("Didn't find the user to promote");
             return;
@@ -96,7 +98,7 @@ public class UserManager implements Manager<User>, Parse<User> {
 
     public Organizer createOrganizer(String name, Date birthDate, String password) {
         WriteToFile.log();
-        System.out.println(birthDate);
+        //System.out.println(birthDate);
 
         var newUser = new Organizer(name, new Date(), birthDate,0f, password);
 

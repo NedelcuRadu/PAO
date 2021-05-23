@@ -1,4 +1,4 @@
 ID,AUCTION_ID,OWNER,NAME,DESCRIPTION,START_PRICE,TARGET_PRICE,BOUGHT_PRICE
 1,Roman Treasures,Marian,Leonidas' Spear,The spear of Leonidas,1000,2000, null
-2,Paris Paintings,Emilia,Van Gogh Painting,A painting, 1400,2800, null
+2,Expressionist Paintings,Emilia,Van Gogh Painting,A painting, 1400,2800, null
 3,Roman Treasures,Ionel,Nero's Helmet,The helmet of Nero,1500,3000,null

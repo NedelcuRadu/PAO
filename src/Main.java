@@ -2,6 +2,7 @@ import IOClasses.CSVReader;
 import IOClasses.WriteToFile;
 import managers.AuctionManager;
 import managers.BidParser;
+import managers.DBManager;
 import managers.UserManager;
 import models.Command;
 import models.Product;
@@ -27,6 +28,7 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Username: ");
             String username = scanner.next();
+            username = DataValidator.escapeString(username);
             while (UserManager.getInstance().existsUser(username)) {
                 System.out.println("Username taken, please try a different one.");
                 System.out.print("Username: ");
@@ -43,7 +45,7 @@ public class Main {
                     System.out.println("Passwords don't match!");
             }
             while (birthdate == null) {
-                System.out.print("Birthdate (DD/MM/YYYY): ");
+                System.out.print("Birthdate (YYYY-MM-DD): ");
                 String date = scanner.next();
                 birthdate = DataValidator.convertToValidDate(date);
                 if (birthdate == null)
@@ -63,27 +65,33 @@ public class Main {
             var admin = userManager.createAdmin("admin","admin");
             var organizer = userManager.createOrganizer("London Museum",DataValidator.convertToValidDate("2021-03-20"),"org");
             var a1 =auctionManager.createAuction("London Museum","Paris Paintings", DataValidator.convertToValidDate("2022-02-23"));
+            System.out.println("All users");
+            userManager.index();
 
             //Citesc auctions din CSV
             var auctionsStrings = CSVReader.read("auctions.csv",",");
+            System.out.println(auctionsStrings);
             assert auctionsStrings != null;
             auctionManager.parseList(auctionsStrings);
+            System.out.println("All auctions");
+            auctionManager.index();
             var productStrings = CSVReader.read("ProductsCSV.csv",",");
             assert productStrings!=null;
             auctionManager.populateProducts(productStrings);
             auctionManager.indexProducts();
             Product p1 = new Product.ProductBuilder("Spear","Marian",130f).build(); //Fac un produs
-            a1.addProduct(p1); // Il adaug la licitatie
+            DBManager.insert(p1);
+          //  a1.addProduct(p1); // Il adaug la licitatie
             marian.addFounds(30000f);
             admin.addFounds(500f);
             var bidStrings = CSVReader.read("BidsCSV.csv",",");
             BidParser.populateBids(bidStrings);
-            marian.indexBids(); //Acum nu mai are bids
             admin.placeBid(p1,300f);
             marian.placeBid(p1,100f); // Fac un  bid pentru produs
+            marian.indexBids();
             p1.buyOut(); //Termin licitatia pentru produs
             System.out.println(p1.getOwner()); //Afisez noul owner
-            marian.indexBids(); //Acum nu mai are bids
+            marian.indexBids(); //Acum nu mai are bid pt acel produs
             Scanner scanner = new Scanner(System.in);
 
             String username;
@@ -107,6 +115,7 @@ public class Main {
                         case 1: //LogIn
                             System.out.print("Username: ");
                             username = scanner.next();
+                            username = DataValidator.escapeString(username);
                             System.out.print("Password: ");
                             password = scanner.next();
                             loggedUser = userManager.logIn(username, password);

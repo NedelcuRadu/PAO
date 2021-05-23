@@ -99,9 +99,9 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     }
 
     public Auction findAuction(String name) {
-        System.out.println("Searching for " + name);
+        //System.out.println("Searching for " + name);
         for (var tmp : auctions) {
-            System.out.println(tmp.getName());
+           // System.out.println(tmp.getName());
             if (tmp.getName().equals(name))
                 return tmp;
         }
@@ -150,7 +150,7 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     }
 
     public Product findProduct(String productId) {
-        System.out.println("Searching for " + productId);
+       // System.out.println("Searching for " + productId);
         for (var auction : auctions) {
             var tmp = auction.findProduct(productId);
             if (tmp != null)
