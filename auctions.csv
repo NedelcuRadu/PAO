@@ -1,3 +1,4 @@
-Organizer,Auction Name,Start Date,End Date
-London Museum,London Art,20/02/2021,20/03/2021
-London Museum,Expressionist Paintings,23/01/2022,23/02/2022
+ID,Start_Date,End_Date,USER_ID
+London Museum,2021-02-20,2021-03-20,London Art
+London Museum,2022-01-23,2022-02-23,Expressionist Paintings
+Roman Treasures,2022-01-23,2022-02-23,London Museum

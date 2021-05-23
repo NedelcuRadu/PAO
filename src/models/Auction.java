@@ -28,27 +28,32 @@ public class Auction extends Model implements Comparable<Auction> {
 
     public Auction(String organizer, String name, Date startDate, Date endDate) {
         var foundUser = UserManager.getInstance().findUser(organizer);
-        if (foundUser instanceof Organizer)
-            this.organizer = (Organizer) UserManager.getInstance().findUser(organizer);
-
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
+        if (foundUser instanceof Organizer) {
+            this.organizer = (Organizer) foundUser;
+            ((Organizer) foundUser).addAuction(this);
+        } else System.out.println("No organizer with name " + organizer);
     }
 
     public Auction(Organizer organizer, String name, Date endDate) {
         this.name = name;
         this.endDate = endDate;
         this.organizer = organizer;
+        organizer.addAuction(this);
     }
 
     public Auction(String organizer, String name, Date endDate) {
+
         var foundUser = UserManager.getInstance().findUser(organizer);
-        if (foundUser instanceof Organizer)
-            this.organizer = (Organizer) foundUser;
-        else System.out.println("No organizer with name " + organizer);
+        System.out.println(foundUser);
         this.name = name;
         this.endDate = endDate;
+        if (foundUser instanceof Organizer) {
+            this.organizer = (Organizer) foundUser;
+            ((Organizer) foundUser).addAuction(this);
+        } else System.out.println("No organizer with name " + organizer);
     }
 
     public Date getStartDate() {
@@ -112,6 +117,7 @@ public class Auction extends Model implements Comparable<Auction> {
     public void deleteProduct(Product product) {
         WriteToFile.log();
         productList.remove(product);
+        // product.setAuction("NULL");
     }
 
     public void closeAuction() {
@@ -141,10 +147,13 @@ public class Auction extends Model implements Comparable<Auction> {
         }
     }
 
-    public Product findProduct(String productName) {
-        for (var product : productList)
-            if (productName.equals(product.getName()))
+    public Product findProduct(String productID) {
+        System.out.println("In auction: " + getName());
+        for (var product : productList) {
+            System.out.println(productID + " " + product.getPK());
+            if (productID.equals(product.getPK()))
                 return product;
+        }
         return null;
     }
 

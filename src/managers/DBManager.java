@@ -2,6 +2,7 @@ package managers;
 
 import IOClasses.WriteToFile;
 import databaseConfig.DatabaseConfiguration;
+import models.Bid;
 import models.Model;
 import models.Product;
 import models.User;
@@ -46,6 +47,7 @@ public class DBManager {
         String deleteSql = "DELETE FROM " + obj.getTableName() + " WHERE ID = " + obj.getPK();
         Connection connection = DatabaseConfiguration.getDatabaseConnection();
         try {
+            System.out.println("Executing "+deleteSql);
             PreparedStatement preparedStatement = connection.prepareStatement(deleteSql);
             preparedStatement.execute();
         } catch (SQLException e) {
@@ -243,7 +245,43 @@ public class DBManager {
 
     }
 
-    public static void mainBids(String[] args) {
+    public static void main(String[] args) {
+        WriteToFile.writeLn("logging.txt", "nume_actiune,timestamp");
+        var auctionManager = AuctionManager.getInstance();
+        var userManager = UserManager.getInstance();
+        //region Index
+        var results = DBManager.index("USERS");
+        userManager.parseList(results);
+        //userManager.index(); #Acum am userii in cache
+        results = DBManager.index("AUCTIONS");
+        auctionManager.parseList(results);
 
+        results = DBManager.index("PRODUCTS");
+        auctionManager.populateProducts(results);
+        auctionManager.indexProducts(); //Produsele care sunt in auctions (exista produse care sunt doar la users)
+        System.out.println("ALL PRODUCTS");
+        userManager.indexProducts(); //Toate produsele (nu exista produs fara owner)
+
+        results = DBManager.index("BIDS");
+        BidParser.populateBids(results);
+        userManager.indexBids();
+
+        User Avi = userManager.findUser("Avi Gordon");
+        User Emme = userManager.findUser("Emme Pace");
+        var newProduct = new Product.ProductBuilder("Spear7", "Giorgia Phelps", 240f).build(); //Fac un produs
+        userManager.indexProducts(); //Toate produsele (nu exista produs fara owner)
+        DBManager.insert(newProduct);
+        Avi.addFounds(1000f); //Ma asigur ca au destule fonduri
+        Emme.addFounds(1000f);
+        var newBid = new Bid(Avi,500f,newProduct);
+        newBid = Avi.placeBidBD(newProduct,newBid);
+        Emme.placeBid(newProduct,600f);
+        userManager.indexBids();
+        newProduct.buyOut();
+        userManager.indexBids(); //Avi nu mai are bids acum, Emme mai are doar un bid
+        System.out.println("The new owner: "+newProduct.getOwner()); //Emme a devenit owner
+
+        userManager.indexProducts();
+        DBManager.delete(newBid);
     }
 }

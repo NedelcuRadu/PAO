@@ -197,15 +197,18 @@ public class Product extends Model {
         if (bids.size() == 0)
             System.out.println("No bids for this item");
         this.owner = bids.peek().getOwner();
+        owner.addProduct(this);
         this.boughtPrice = bids.peek().getAmount();
         while (bids.peek() != null) {
             var bid = bids.remove();
             var owner = bid.getOwner();
             owner.deleteBid(bid.getProduct());
+            owner.addFounds(bid.getAmount()); //Returnez banii celor ce nu au castigat
         }
         if (this.auction != null)
-            auction.deleteProduct(this); //Daca are un auction, il scot de pe lista de licitatie
-
+        {auction.deleteProduct(this); //Daca are un auction, il scot de pe lista de licitatie
+            setAuction(null); }
+        DBManager.update(this);
     }
 
     public Float getStartPrice() {

@@ -29,22 +29,26 @@ public class Organizer extends User {
     }
 
     public Product registerProduct(String name, Float startingPrice) {
-        return new Product.ProductBuilder(name, this.getName(),startingPrice).build(); //Fac un produs
+        return new Product.ProductBuilder(name, this.getName(), startingPrice).build(); //Fac un produs
     }
 
     public Product registerProduct(String name, Float startingPrice, Float targetPrice) {
-        return new Product.ProductBuilder(name, this.getName(),startingPrice).withTargetPrice(targetPrice).build(); //Fac un produs
+        return new Product.ProductBuilder(name, this.getName(), startingPrice).withTargetPrice(targetPrice).build(); //Fac un produs
     }
 
     public Auction createAuction(String name, Date endDate) {
         try {
-            var newAuction = AuctionManager.getInstance().createAuction(this.getName(), name, endDate);
-            auctionMapMap.put(newAuction.getName(), newAuction);
+            var newAuction = AuctionManager.getInstance().createAuction(this.getPK(), name, endDate);
+            auctionMapMap.put(newAuction.getPK(), newAuction);
             return newAuction;
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void addAuction(Auction newAuction) {
+        auctionMapMap.put(newAuction.getPK(), newAuction);
     }
 
     @Override

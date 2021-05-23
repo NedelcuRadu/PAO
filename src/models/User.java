@@ -224,12 +224,15 @@ public class User extends Model {
     }
 
     public void indexBids() {
-        System.out.format("+------------+-----------------+-------------+----------------+%n");
-        System.out.format("|  ITEM NAME | PLACEMENT DATE  |    AMOUNT   |ARE YOU WINNING?|%n");
-        System.out.format("+------------+-----------------+-------------+----------------+%n");
-        for (var currentProduct : bidList.entrySet())
-            currentProduct.getValue().showBid();
-        System.out.format("+------------+-----------------+-------------+----------------+%n");
+        if (bidList.size() > 0) {
+            System.out.format("+------------+-----------------+-------------+----------------+%n");
+            System.out.format("|  ITEM NAME | PLACEMENT DATE  |    AMOUNT   |ARE YOU WINNING?|%n");
+            System.out.format("+------------+-----------------+-------------+----------------+%n");
+            for (var currentProduct : bidList.entrySet())
+                currentProduct.getValue().showBid();
+            System.out.format("+------------+-----------------+-------------+----------------+%n");
+        } else
+            System.out.println("No bids yet");
     }
 
     public void placeBid(Product product, Float amount) {
@@ -240,8 +243,28 @@ public class User extends Model {
             Bid newBid = new Bid(this, amount, product);
             product.placeBid(newBid);
             bidList.put(product, newBid);
+            DBManager.insert(newBid);
         } else
             System.out.println("You don't have enough founds, please add some first.");
+    }
+
+    public void placeBid(Product product, Bid bid) //Pt bids citite din baza de date, au avut deja loc deci nu scad fonduri
+    {
+        WriteToFile.log();
+        product.placeBid(bid);
+        bidList.put(product, bid);
+    }
+
+    public Bid placeBidBD(Product product, Bid bid) {
+        if (bid.getAmount() < this.founds) {
+            this.founds -= bid.getAmount();
+            bidList.put(product, bid);
+            product.placeBid(bid);
+            DBManager.update(this);
+            return DBManager.insert(bid);
+        } else
+            System.out.println("You don't have enough founds, please add some first.");
+        return null;
     }
 
     public void placeBid(Product product, Float amount, Date date) {
@@ -251,6 +274,7 @@ public class User extends Model {
             Bid newBid = new Bid(this, amount, date, product);
             product.placeBid(newBid);
             bidList.put(product, newBid);
+            DBManager.insert(newBid);
         } else
             System.out.println("You don't have enough founds, please add some first.");
     }
@@ -261,7 +285,17 @@ public class User extends Model {
     }
 
     public void addProduct(Product product) {
-        productsList.add(product);
+        if (!productsList.contains(product))
+            productsList.add(product);
+    }
+
+    public Product findProduct(String productID) {
+        System.out.println("In user " + this.getName());
+        System.out.println("Searching for: " + productID);
+        return productsList.stream().filter(x -> {
+            System.out.println(x.getPK());
+            return x.getPK().equals(productID);
+        }).findFirst().get();
     }
 
     @Override

@@ -1,3 +1,3 @@
-Bidder Name,Auction Name,Product name,Bid amount
-Marian,Roman Treasures,Nero's Helmet,200
-Marian,Roman Treasures,Leonidas' Spear, 500
+ID,PLACEMENT_DATE,AMOUNT,OWNER,PRODUCT_ID
+1,2021-02-20,200,Marian,1
+2,2021-02-20,500,Marian,3

@@ -4,13 +4,11 @@ import IOClasses.Parse;
 import IOClasses.WriteToFile;
 import models.Admin;
 import models.Organizer;
+import models.Product;
 import models.User;
 import validators.DataValidator;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
 
@@ -50,13 +48,12 @@ public class UserManager implements Manager<User>, Parse<User> {
 
     public void promoteToOrganizer(String id) {
         User toPromote = findUser(id);
-        if (toPromote == null)
-        {
+        if (toPromote == null) {
             System.out.println("Didn't find the user to promote");
             return;
         }
         userMap.remove(toPromote.getPK());
-        Organizer tmp = new Organizer(toPromote.getName(),toPromote.getRegisterDate(),toPromote.getBirthDate(),toPromote.getFounds(),toPromote.getPasswordHash());
+        Organizer tmp = new Organizer(toPromote.getName(), toPromote.getRegisterDate(), toPromote.getBirthDate(), toPromote.getFounds(), toPromote.getPasswordHash());
         userMap.put(tmp.getPK(), tmp);
     }
 
@@ -99,8 +96,13 @@ public class UserManager implements Manager<User>, Parse<User> {
 
     public Organizer createOrganizer(String name, Date birthDate, String password) {
         WriteToFile.log();
-        var newUser = new Organizer(name, birthDate, password);
+        System.out.println(birthDate);
+
+        var newUser = new Organizer(name, new Date(), birthDate,0f, password);
+
+
         DBManager.insert(newUser);
+        name = DataValidator.escapeString(name);
         userMap.put(name, newUser);
         return newUser;
     }
@@ -125,17 +127,37 @@ public class UserManager implements Manager<User>, Parse<User> {
         System.out.format("+--------+-----------------+--------------+----------+%n");
         WriteToFile.log();
     }
+
     public void indexProducts() {
         BiConsumer<String, User> printConsumer = (key, value) -> {
-           value.indexProducts();
+            value.indexProducts();
         };
         userMap.forEach(printConsumer);
         WriteToFile.log();
     }
+
+    public void indexBids() {
+        BiConsumer<String, User> printConsumer = (key, value) -> {
+            System.out.println("Bids for " + key);
+            value.indexBids();
+        };
+        userMap.forEach(printConsumer);
+        WriteToFile.log();
+    }
+
     public void delete(User toDelete) {
         WriteToFile.log();
         userMap.remove(toDelete.getPK());
         DBManager.delete(toDelete);
+    }
+
+    public Product findProduct(String productID) {
+        for (var user : userMap.values()) {
+            var tmp = user.findProduct(productID);
+            if (tmp != null)
+                return tmp;
+        }
+        return null;
     }
 
 

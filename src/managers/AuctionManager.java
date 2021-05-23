@@ -49,14 +49,18 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
         String tmp = obj.get("TARGET_PRICE");
         Float targetPrice = null;
         Float boughtPrice = null;
-        if (tmp!=null)
-           targetPrice = Float.parseFloat(tmp);
-        tmp = obj.get("BOUGHT_PRICE");
-        if (tmp!=null)
+
+
+        try {
+            targetPrice = Float.parseFloat(tmp);
+            tmp = obj.get("BOUGHT_PRICE");
             boughtPrice = Float.parseFloat(tmp);
+        } catch (NumberFormatException | NullPointerException ignored) {
+
+        }
         Float startingPrice = Float.parseFloat(obj.get("START_PRICE"));
         String description = obj.get("DESCRIPTION");
-        return new Product.ProductBuilder(name, owner,startingPrice).withID(id).withTargetPrice(targetPrice).withDescription(description).withBoughtPrice(boughtPrice).build();
+        return new Product.ProductBuilder(name, owner, startingPrice).withID(id).withTargetPrice(targetPrice).withDescription(description).withBoughtPrice(boughtPrice).build();
     }
 
     public void populateProducts(List<Map<String, String>> objs) {
@@ -64,8 +68,8 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
             var auctionName = productMap.get("AUCTION_ID");
             var ownerID = productMap.get("OWNER");
             var parsedProduct = parseProduct(productMap);
-            if (auctionName!=null)
-            findAuction(auctionName).addProduct(parsedProduct);
+            if (auctionName != null)
+                findAuction(auctionName).addProduct(parsedProduct);
             UserManager.getInstance().findUser(ownerID).addProduct(parsedProduct);
         }
     }
@@ -95,10 +99,12 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     }
 
     public Auction findAuction(String name) {
-        System.out.println("Searching for "+name);
-        for (var tmp : auctions)
+        System.out.println("Searching for " + name);
+        for (var tmp : auctions) {
+            System.out.println(tmp.getName());
             if (tmp.getName().equals(name))
                 return tmp;
+        }
 
         return null;
     }
@@ -126,7 +132,7 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
     }
 
     public void delete(Auction toDelete) {
-        if (toDelete==null)
+        if (toDelete == null)
             return;
         Function<Auction, Date> cmp = Auction::getStartDate;
         var index = binarySearch(auctions, toDelete.getStartDate(), cmp);
@@ -143,4 +149,13 @@ public class AuctionManager implements Manager<Auction>, Parse<Auction> {
             auctions.get(i).indexProducts();
     }
 
+    public Product findProduct(String productId) {
+        System.out.println("Searching for " + productId);
+        for (var auction : auctions) {
+            var tmp = auction.findProduct(productId);
+            if (tmp != null)
+                return tmp;
+        }
+        return null;
+    }
 }
